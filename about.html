@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Anand Netralaya Eye Care Hospital Virar West</title>
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-[#0c7d85] selection:text-white overflow-x-hidden">
+
+  <!-- Header / Navigation Bar -->
+  <header id="mainHeader" class="sticky top-0 z-50 bg-[#e3f4f1] border-b border-[#cbe8e3] w-full transition-all duration-300 ease-in-out">
+    <nav class="w-full px-6 sm:px-12 lg:px-20 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center space-x-3.5 group">
+        <div class="relative w-9 h-9 flex items-center justify-center shrink-0 text-[#0c7d85]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+            <circle cx="12" cy="12" r="3" fill="currentColor" />
+          </svg>
+          <span class="absolute top-1 right-1 w-2.5 h-1 bg-[#e8a838] rounded-full"></span>
+        </div>
+        <div>
+          <div class="text-xl font-black tracking-tight leading-none">
+            <span class="text-slate-900">Anand </span>
+            <span class="text-[#0c7d85]">Netralaya</span>
+          </div>
+          <span class="text-[9px] tracking-[0.24em] text-slate-500 font-bold uppercase block mt-1">EYE CARE HOSPITAL</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <div class="hidden lg:flex items-center space-x-10 text-[15px] font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-[#0c7d85] transition-colors">Home</a>
+        <a href="about.html" class="text-[#0c7d85] font-bold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:bg-[#e8a838]">About</a>
+        <a href="service.html" class="hover:text-[#0c7d85] transition-colors">Services</a>
+        <a href="your-visit.html" class="hover:text-[#0c7d85] transition-colors">Your Visit</a>
+        <a href="gallery.html" class="hover:text-[#0c7d85] transition-colors">Gallery</a>
+        <a href="contact.html" class="hover:text-[#0c7d85] transition-colors">Contact</a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center space-x-6">
+        <a href="tel:+919923025465" class="hidden xl:flex items-center gap-2 text-[15px] font-bold text-[#0c7d85] hover:opacity-80 transition-opacity">
+          <i data-lucide="phone" class="w-4 h-4 text-[#0c7d85] stroke-[2.5]"></i>
+          <span>+91 99230 25465</span>
+        </a>
+
+        <a href="contact.html#booking-form" class="hidden sm:inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md transition-all">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-teal-100/50 focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#e3f4f1] border-b border-[#cbe8e3] px-6 pt-3 pb-6 space-y-3 font-semibold text-slate-700 shadow-lg">
+      <a href="index.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Home</a>
+      <a href="about.html" class="mobile-nav-link block py-2 border-b border-teal-100 text-[#0c7d85] font-bold">About</a>
+      <a href="service.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Services</a>
+      <a href="your-visit.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Your Visit</a>
+      <a href="gallery.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Gallery</a>
+      <div class="pt-3">
+        <a href="contact.html#booking-form" class="mobile-nav-link w-full inline-flex items-center justify-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm py-3 rounded-full shadow-md transition-all">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb & Page Hero Banner Section -->
+  <section class="bg-[#e3f4f1] border-b border-[#cbe8e3] pt-8 pb-14 px-6 sm:px-12 lg:px-20 w-full">
+    <div class="max-w-7xl mx-auto space-y-4">
+      <nav class="flex items-center space-x-2 text-xs font-semibold text-slate-500">
+        <a href="index.html" class="hover:text-[#0c7d85] transition-colors">Home</a>
+        <span>&gt;</span>
+        <span class="text-[#0c7d85] font-bold">About</span>
+      </nav>
+
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/80 border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span>ESTABLISHED 2008</span>
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+          One of Virar's most<br />
+          trusted <span class="text-[#0c7d85]">eye care hospitals</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg font-medium">
+          We help you see better &amp; hence live better
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Built Since 2008 Detail Section -->
+  <section class="py-16 lg:py-24 px-6 sm:px-12 lg:px-20 bg-white border-b border-slate-100">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <div class="lg:col-span-7 space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          built <span class="text-[#0c7d85]">since 2008</span>
+        </h2>
+
+        <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+          <p>
+            Anand Netralaya Hospital is one of the leading and most trusted eye care hospitals, having started its journey in 2008. Its path so far has built experience and expertise across a range of clinical and diagnostic procedures, including phacoemulsification with foldable IOL implantation.
+          </p>
+          <p>
+            The hospital is fully equipped with advanced digital imaging, laser and surgical technologies, and consistently imports peer-approved technologies from across the world. It is known for excellence in ophthalmic services with personalised care, and is committed to pioneering the technological revolution in eye care.
+          </p>
+          <p>
+            The center comprises comfortable, homely recovery rooms and a separate operation theatre complex with HEPA filter equipped with laminar airflow systems and air-locked lobbies. Every subspeciality is attended by a qualified and experienced ophthalmic surgeon, supported by diagnostic setups from the respective subspeciality clinic.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm font-semibold text-slate-700 pt-2">
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+            <span>NABH Standards</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+            <span>Serving Virar and the surrounding region since 2008</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+            <span>Comfortable, homely recovery rooms</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5">
+              <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+            </div>
+            <span>Every subspecialty attended by a qualified ophthalmic surgeon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 space-y-4">
+        <div class="rounded-2xl overflow-hidden border border-slate-200/80 shadow-md aspect-[16/7]">
+          <img src="gallery-5.webp" alt="Hospital Reception" class="w-full h-full object-cover">
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-slate-200/80 shadow-md aspect-[4/3]">
+          <img src="gallery-6.webp" alt="Dr. Anand Rout in OT" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Meet The Doctor Section -->
+  <section id="meet-doctor" class="py-20 px-6 sm:px-12 lg:px-20 bg-slate-50 border-b border-slate-200/60">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center space-y-3">
+        <span class="text-xs font-bold text-[#0c7d85] uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-md border border-teal-100">MEET THE DOCTOR</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900">
+          Dr. Anand Rout<br />
+          <span class="text-[#0c7d85]">Ophthalmologist / Eye Surgeon</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+            <div class="w-full h-full rounded-full border-4 border-[#0c7d85]/20 p-2 bg-white shadow-xl overflow-hidden">
+              <img src="dr-anand-rout.png.PNG" alt="Dr. Anand Rout" class="w-full h-full object-cover rounded-full" onerror="this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80'">
+            </div>
+            <div class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-[#0a6269] text-white text-xs font-extrabold px-5 py-2 rounded-full shadow-lg border border-teal-400/30 text-center shrink-0 whitespace-nowrap">
+              MBBS DOMS DNB FICO (UK)
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Dr. Anand Rout is a leading eye doctor in Virar with several years of experience in ophthalmology and eye surgery. Under his care, Anand Netralaya provides high quality, value-for-money eye care and has emerged as a preferred, recognised eye care facility.
+          </p>
+
+          <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-4">
+            <div class="flex items-center space-x-2 text-[#0c7d85] font-extrabold text-xs tracking-wider uppercase">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+              <span>EDUCATION</span>
+            </div>
+
+            <div class="space-y-3 text-xs sm:text-sm">
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3">
+                <div>
+                  <span class="font-bold text-slate-900">MBBS</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">Lokmanya Tilak Municipal Medical College, Sion, Mumbai</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">2006</span>
+              </div>
+
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3">
+                <div>
+                  <span class="font-bold text-slate-900">DOMS (Ophthalmology)</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">Rajiv Gandhi University of Health Sciences, Bangalore</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">2010</span>
+              </div>
+
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3">
+                <div>
+                  <span class="font-bold text-slate-900">DNB</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">Deenanath Mangeshkar Hospital, Pune</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">2012</span>
+              </div>
+
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3">
+                <div>
+                  <span class="font-bold text-slate-900">FICO</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">International Council of Ophthalmology, United Kingdom</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-1">
+              <div class="flex items-center space-x-2 text-[#0c7d85] font-extrabold text-xs tracking-wider uppercase">
+                <i data-lucide="ribbon" class="w-4 h-4"></i>
+                <span>MEMBERSHIP</span>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-800">
+                Bombay Ophthalmologists' Association (BOA)
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-1">
+              <div class="flex items-center space-x-2 text-[#0c7d85] font-extrabold text-xs tracking-wider uppercase">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>REGISTRATION</span>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-800">
+                Maharashtra Medical Council, 2008 (Reg. 2008052089)
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Care Built Around The Patient -->
+  <section class="py-20 px-6 sm:px-12 lg:px-20 bg-[#07383c] text-white">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-teal-300 uppercase tracking-widest bg-teal-900/60 px-3.5 py-1 rounded-full border border-teal-700/50">WHY CHOOSE US</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          Care built around <span class="text-teal-300">the patient</span>
+        </h2>
+        <p class="text-teal-100/80 text-sm sm:text-base leading-relaxed">
+          From the moment you walk in to the day you are discharged, every part of Anand Netralaya is arranged around your comfort and safety.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-[#0b484d] p-7 rounded-2xl border border-teal-800/60 shadow-md space-y-3">
+          <h3 class="text-lg font-bold text-white">Patient-Friendly Hospital</h3>
+          <p class="text-teal-100/70 text-xs sm:text-sm leading-relaxed">Comfortable, homely recovery rooms and personalised care at every step of your visit.</p>
+        </div>
+
+        <div class="bg-[#0b484d] p-7 rounded-2xl border border-teal-800/60 shadow-md space-y-3">
+          <h3 class="text-lg font-bold text-white">No Prior Appointment Required</h3>
+          <p class="text-teal-100/70 text-xs sm:text-sm leading-relaxed">You are welcome to consult us walk-in directly, though prior appointments are prioritized.</p>
+        </div>
+
+        <div class="bg-[#0b484d] p-7 rounded-2xl border border-teal-800/60 shadow-md space-y-3">
+          <h3 class="text-lg font-bold text-white">Walk-ins Always Welcome</h3>
+          <p class="text-teal-100/70 text-xs sm:text-sm leading-relaxed">Turn up during consulting hours; the team and reception will register you right away.</p>
+        </div>
+
+        <div class="bg-[#0b484d] p-7 rounded-2xl border border-teal-800/60 shadow-md space-y-3">
+          <div class="w-9 h-9 rounded-lg bg-teal-900/80 text-teal-300 flex items-center justify-center">
+            <i data-lucide="eye" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Peer-Approved Global Technology</h3>
+          <p class="text-teal-100/70 text-xs sm:text-sm leading-relaxed">We consistently import peer-approved digital imaging, laser and surgical technology from across the world.</p>
+        </div>
+
+        <div class="bg-[#0b484d] p-7 rounded-2xl border border-teal-800/60 shadow-md space-y-3">
+          <div class="w-9 h-9 rounded-lg bg-teal-900/80 text-teal-300 flex items-center justify-center">
+            <i data-lucide="shield" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Dedicated Operation Theatre</h3>
+          <p class="text-teal-100/70 text-xs sm:text-sm leading-relaxed">A separate operation theatre complex with air-locked lobbies for maximum safety.</p>
+        </div>
+
+        <div class="bg-[#0b484d] p-7 rounded-2xl border border-teal-800/60 shadow-md space-y-3">
+          <div class="w-9 h-9 rounded-lg bg-teal-900/80 text-teal-300 flex items-center justify-center">
+            <i data-lucide="user-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Qualified Ophthalmic Specialists</h3>
+          <p class="text-teal-100/70 text-xs sm:text-sm leading-relaxed">Every surgery is attended by qualified and experienced ophthalmic consultants.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pre-Footer Banner -->
+  <section class="bg-gradient-to-r from-[#0a6269] via-[#0c7d85] to-[#12a1a8] py-14 px-6 sm:px-12 lg:px-20 text-white">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      
+      <div class="space-y-2 text-center lg:text-left">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to book your eye check-up?</h2>
+        <p class="text-teal-100 text-sm sm:text-base">
+          No prior appointment required and walk-ins are always welcome — but booking ahead ensures you are seen first.
+        </p>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm font-semibold text-teal-100 pt-2">
+          <a href="tel:+919923025465" class="flex items-center gap-1.5 hover:text-white"><i data-lucide="phone" class="w-4 h-4"></i> +91 99230 25465</a>
+          <a href="tel:+919075035465" class="flex items-center gap-1.5 hover:text-white"><i data-lucide="phone" class="w-4 h-4"></i> +91 90750 35465</a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 shrink-0">
+        <a href="contact.html#booking-form" class="bg-white text-[#0a6269] hover:bg-teal-50 font-bold text-sm px-7 py-3.5 rounded-full shadow-lg transition-all flex items-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+        <a href="contact.html" class="border border-white/80 hover:bg-white/10 text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all">
+          Contact us
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#052b2e] text-slate-300 py-12 px-6 sm:px-12 lg:px-20 border-t border-teal-950">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-xs">
+      
+      <div class="space-y-3">
+        <h3 class="text-base font-bold text-white">Anand Netralaya</h3>
+        <p class="text-slate-400 leading-relaxed">We help you see better &amp; hence live better</p>
+        <p class="text-slate-400 leading-relaxed">Trusted eye care in Virar West since 2008, led by Dr. Anand Rout.</p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">QUICK LINKS</h4>
+        <p><a href="index.html" class="hover:text-white">Home</a></p>
+        <p><a href="about.html" class="hover:text-white">About</a></p>
+        <p><a href="service.html" class="hover:text-white">Services</a></p>
+        <p><a href="your-visit.html" class="hover:text-white">Your Visit</a></p>
+        <p><a href="gallery.html" class="hover:text-white">Gallery</a></p>
+        <p><a href="contact.html" class="hover:text-white">Contact</a></p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">OUR CLINICS</h4>
+        <p><a href="service.html#cataract" class="hover:text-white">Cataract Clinic</a></p>
+        <p><a href="service.html#retina-cornea" class="hover:text-white">Retina &amp; Cornea Clinic</a></p>
+        <p><a href="service.html#glaucoma" class="hover:text-white">Glaucoma Clinic</a></p>
+        <p><a href="service.html#lasik" class="hover:text-white">Lasik Clinic</a></p>
+        <p><a href="service.html#pediatric" class="hover:text-white">Pediatric Clinic &amp; Squint Evaluation</a></p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">CONTACT US</h4>
+        <p class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i> Charbhuja Apartment, Kharodi Naka, Bolinj Road, Virar West, Maharashtra 401303, India</p>
+        <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i> +91 99230 25465</p>
+        <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i> +91 90750 35465</p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-teal-900/60 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+      <div>&copy; 2026 Anand Netralaya. All rights reserved.</div>
+      <div>Dr. Anand Rout - MBBS • DOMS • DNB • FICO (UK) Reg. 2008052089</div>
+    </div>
+  </footer>
+
+  <script>
+  // Initialize Lucide Icons
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+
+  // Header Transparency on Scroll
+  const header = document.getElementById('mainHeader');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.remove('bg-[#e3f4f1]', 'border-[#cbe8e3]');
+        header.classList.add('bg-white/70', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
+      } else {
+        header.classList.add('bg-[#e3f4f1]', 'border-[#cbe8e3]');
+        header.classList.remove('bg-white/70', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
+      }
+    });
+  }
+
+  // Mobile Menu Drawer Handler
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  }
+
+  // FAQ Accordion Toggle
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const answer = item.querySelector('.faq-answer');
+      const icon = item.querySelector('.faq-icon');
+      
+      if (!answer) return;
+
+      const isHidden = answer.classList.contains('hidden');
+      
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+      document.querySelectorAll('.faq-icon').forEach(i => {
+        if (i) i.style.transform = 'rotate(0deg)';
+      });
+      document.querySelectorAll('.faq-item').forEach(i => i.setAttribute('aria-expanded', 'false'));
+
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        if (icon) icon.style.transform = 'rotate(180deg)';
+        item.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // Smooth Counter Animation
+  function startCounterAnimation() {
+    const counters = document.querySelectorAll('.counter-number');
+
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const duration = 1200;
+      const start = performance.now();
+
+      function step(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const currentCount = Math.floor(progress * target);
+
+        counter.innerText = currentCount.toLocaleString();
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      }
+
+      requestAnimationFrame(step);
+    });
+  }
+
+  let animated = false;
+  const metricsSection = document.getElementById('metrics-section');
+
+  if (metricsSection) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          startCounterAnimation();
+          animated = true;
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(metricsSection);
+  }
+</script>
+</body>
+</html>

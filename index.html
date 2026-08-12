@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anand Netralaya | Eye Care Hospital Virar West</title>
+  
+  <!-- Eye SVG Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c7d85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z'/><circle cx='12' cy='12' r='3' fill='%230c7d85'/></svg>">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-src https://www.google.com; child-src https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Infinite Marquee Animation for Testimonials */
+    @keyframes infinite-scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-infinite-scroll {
+      display: flex;
+      animation: infinite-scroll 30s linear infinite;
+    }
+
+    /* Custom Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0c7d85;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #074b50;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-[#0c7d85] selection:text-white overflow-x-hidden">
+
+  <!-- ================= HEADER / NAVIGATION BAR ================= -->
+  <header id="mainHeader" class="sticky top-0 z-50 bg-[#e3f4f1]/90 backdrop-blur-md border-b border-[#cbe8e3] w-full transition-all duration-300 ease-in-out">
+    <nav class="w-full px-6 sm:px-12 lg:px-20 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center space-x-3.5 group">
+        <div class="relative w-10 h-10 flex items-center justify-center shrink-0 text-[#0c7d85] group-hover:scale-110 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+            <circle cx="12" cy="12" r="3" fill="currentColor" />
+          </svg>
+          <span class="absolute top-1 right-1 w-2.5 h-1 bg-[#e8a838] rounded-full"></span>
+        </div>
+        <div>
+          <div class="text-xl font-black tracking-tight leading-none">
+            <span class="text-slate-900">Anand </span>
+            <span class="text-[#0c7d85]">Netralaya</span>
+          </div>
+          <span class="text-[9px] tracking-[0.24em] text-slate-500 font-bold uppercase block mt-1">EYE CARE HOSPITAL</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden lg:flex items-center space-x-9 text-[15px] font-semibold text-slate-700">
+        <a href="index.html" class="text-[#0c7d85] font-bold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:bg-[#e8a838]">Home</a>
+        <a href="about.html" class="hover:text-[#0c7d85] transition-colors py-1">About</a>
+        <a href="service.html" class="hover:text-[#0c7d85] transition-colors py-1">Services</a>
+        <a href="your-visit.html" class="hover:text-[#0c7d85] transition-colors py-1">Your Visit</a>
+        <a href="gallery.html" class="hover:text-[#0c7d85] transition-colors py-1">Gallery</a>
+        <a href="appointment.html" class="hidden sm:inline-flex items-center space-x-2 bg-[#0a6269] ...">
+      </div>
+
+      <!-- Right Action Callouts -->
+      <div class="flex items-center space-x-6">
+        <a href="tel:+919923025465" class="hidden xl:flex items-center gap-2 text-[15px] font-bold text-[#0c7d85] hover:opacity-80 transition-opacity">
+          <i data-lucide="phone" class="w-4 h-4 text-[#0c7d85] stroke-[2.5]"></i>
+          <span>+91 99230 25465</span>
+        </a>
+
+        <a href="contact.html#booking-form" class="hidden sm:inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] hover:shadow-lg hover:-translate-y-0.5 text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md transition-all duration-300">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" aria-label="Toggle menu" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-teal-100/50 focus:outline-none transition-colors">
+          <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#e3f4f1] border-b border-[#cbe8e3] px-6 pt-3 pb-6 space-y-3 font-semibold text-slate-700 shadow-lg">
+      <a href="index.html" class="block py-2 border-b border-teal-100 text-[#0c7d85] font-bold">Home</a>
+      <a href="about.html" class="block py-2 border-b border-teal-100 hover:text-[#0c7d85]">About</a>
+      <a href="service.html" class="block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Services</a>
+      <a href="your-visit.html" class="block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Your Visit</a>
+      <a href="gallery.html" class="block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Gallery</a>
+      <a href="appointment.html" class="w-full inline-flex items-center justify-center space-x-2 bg-[#0a6269] ...">
+      <div class="pt-3">
+        <a href="contact.html#booking-form" class="w-full inline-flex items-center justify-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm py-3 rounded-full shadow-md transition-all">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative min-h-[85vh] flex items-center py-12 lg:py-16 px-6 sm:px-12 lg:px-20 bg-gradient-to-b from-[#e3f4f1] via-[#e3f4f1]/60 to-[#f8fafc] border-b border-[#cbe8e3] w-full">
+    <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      
+      <!-- Hero Left Content -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/90 backdrop-blur-md border border-teal-100 text-[#0c7d85] text-xs font-bold tracking-wider uppercase shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+          <span>EYE HOSPITAL IN VIRAR WEST • SINCE 2008</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-[56px] font-black text-slate-900 tracking-tight leading-[1.08]">
+          We help you <span class="text-[#0c7d85]">see</span> <span class="text-[#20b2aa]">better</span> &amp; hence live better
+        </h1>
+
+        <p class="text-slate-600 text-base sm:text-[17px] max-w-xl leading-relaxed font-normal">
+          Comprehensive eye care from Dr. Anand Rout — cataract and LASIK surgery, glaucoma, retina, cornea, paediatric and squint clinics, backed by advanced digital imaging and a dedicated operation theatre.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+          <a href="appointment.html" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] hover:shadow-lg hover:-translate-y-0.5 text-white font-bold text-sm px-8 py-3.5 rounded-full shadow-md transition-all duration-300">
+            <i data-lucide="calendar" class="w-4 h-4"></i>
+            <span>Book Appointment</span>
+          </a>
+          <a href="service.html" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 hover:-translate-y-0.5 text-slate-800 font-bold text-sm px-8 py-3.5 rounded-full border border-slate-200/80 shadow-sm transition-all duration-300 group">
+            <span>Our Services</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-[#0c7d85] group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <div class="pt-4">
+          <div class="bg-white/90 backdrop-blur-md p-5 rounded-2xl border border-teal-100/80 shadow-sm grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm font-semibold text-slate-700 max-w-lg">
+            <div class="flex items-center space-x-2.5">
+              <span class="w-2 h-2 rounded-full bg-[#0c7d85]"></span>
+              <span>Since 2008</span>
+            </div>
+            <div class="flex items-center space-x-2.5">
+              <span class="w-2 h-2 rounded-full bg-[#0c7d85]"></span>
+              <span>Walk-ins Welcome</span>
+            </div>
+            <div class="flex items-center space-x-2.5">
+              <span class="w-2 h-2 rounded-full bg-[#0c7d85]"></span>
+              <span>Advanced Laser &amp; Digital Imaging</span>
+            </div>
+            <div class="flex items-center space-x-2.5">
+              <span class="w-2 h-2 rounded-full bg-[#0c7d85]"></span>
+              <span>No Prior Appointment Needed</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Right Image Frame -->
+      <div class="lg:col-span-6 flex justify-center lg:justify-end">
+        <div class="relative w-full max-w-xl">
+          
+          <div class="relative rounded-[32px] overflow-hidden bg-white p-3 shadow-2xl border border-teal-100/80">
+            <div class="relative h-72 sm:h-96 lg:h-[420px] rounded-[24px] overflow-hidden bg-slate-100 group">
+              <img src="id2_4.jpg.webp" alt="Anand Netralaya Eye Care" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700">
+            </div>
+          </div>
+
+          <!-- Top Right Floating Badge -->
+          <div class="absolute -top-4 right-6 sm:right-8 z-10 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl border border-slate-100 text-left hover:-translate-y-1 transition-transform">
+            <div class="text-2xl font-black text-slate-900 leading-tight">7</div>
+            <div class="text-[9px] font-extrabold text-slate-500 uppercase tracking-widest">SPECIALTY CLINICS</div>
+          </div>
+
+          <!-- Bottom Left Floating Badge -->
+          <div class="absolute -bottom-5 left-6 sm:left-8 z-10 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl border border-slate-100 text-left hover:-translate-y-1 transition-transform">
+            <div class="text-2xl font-black text-[#0c7d85] leading-tight">17+</div>
+            <div class="text-[9px] font-extrabold text-slate-500 uppercase tracking-widest">YEARS OF CARE</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Scroll Down Indicator -->
+  <div class="bg-[#f8fafc] py-6 flex flex-col items-center justify-center text-center space-y-1 text-slate-400">
+    <span class="text-[10px] uppercase font-bold tracking-widest">SCROLL</span>
+    <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce text-[#0c7d85]"></i>
+  </div>
+
+
+  <!-- ================= KEY METRICS SECTION ================= -->
+  <section id="metrics-section" class="bg-white py-14 border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div class="space-y-1 p-4 rounded-2xl hover:bg-teal-50/50 transition-colors">
+        <div class="text-4xl sm:text-5xl font-black text-[#0c7d85]">
+          <span class="counter-number" data-target="17">0</span><span class="text-[#0c7d85]">+</span>
+        </div>
+        <div class="text-xs sm:text-sm font-bold text-slate-500">Years of Eye Care</div>
+      </div>
+      <div class="space-y-1 p-4 rounded-2xl hover:bg-teal-50/50 transition-colors">
+        <div class="text-4xl sm:text-5xl font-black text-[#0c7d85]">
+          <span class="counter-number" data-target="7">0</span>
+        </div>
+        <div class="text-xs sm:text-sm font-bold text-slate-500">Specialty Clinics</div>
+      </div>
+      <div class="space-y-1 p-4 rounded-2xl hover:bg-teal-50/50 transition-colors">
+        <div class="text-4xl sm:text-5xl font-black text-[#0c7d85]">
+          <span class="counter-number" data-target="1000">0</span><span class="text-[#0c7d85]">s</span>
+        </div>
+        <div class="text-xs sm:text-sm font-bold text-slate-500">Happy Patients</div>
+      </div>
+      <div class="space-y-1 p-4 rounded-2xl hover:bg-teal-50/50 transition-colors">
+        <div class="text-xl sm:text-2xl font-black text-[#0c7d85] leading-tight pt-1">
+          MBBS • DOMS<br />DNB • FICO (UK)
+        </div>
+        <div class="text-xs sm:text-sm font-bold text-slate-500">Dr. Anand Rout's Qualifications</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about" class="relative py-16 lg:py-24 px-6 sm:px-12 lg:px-20 bg-white border-b border-slate-100 overflow-hidden w-full">
+    <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      
+      <!-- Left Column: Eye Care Image -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-start">
+        <div class="relative w-full max-w-md bg-white p-3 rounded-[32px] border-2 border-amber-200/90 shadow-xl group">
+          <div class="relative overflow-hidden rounded-[22px] bg-white">
+            <img src="eye-care.webp.webp" alt="Eye Examination" class="w-full h-auto object-cover rounded-[20px] block group-hover:scale-105 transition-transform duration-500">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Text Content -->
+      <div class="lg:col-span-7 space-y-6">
+        
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-teal-50/80 border border-teal-100 text-[#0c7d85] text-[11px] font-bold uppercase tracking-wider">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+          <span>ABOUT THE HOSPITAL</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
+          <span class="text-slate-900">Trusted eye care in </span>
+          <span class="text-[#0c7d85]">Virar </span>
+          <span class="text-[#0c7d85]">since 2008</span>
+        </h2>
+
+        <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+          <p>
+            Anand Netralaya Hospital is one of the leading and most trusted eye care hospitals, having started its journey in 2008. Its path so far has built experience and expertise across a range of clinical and diagnostic procedures, including phacoemulsification with foldable IOL implantation.
+          </p>
+          <p>
+            The hospital is fully equipped with advanced digital imaging, laser and surgical technologies, and consistently imports peer-approved technologies from across the world. It is known for excellence in ophthalmic services with personalised care, and is committed to pioneering the technological revolution in eye care.
+          </p>
+        </div>
+
+        <!-- Checklist -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3.5 text-xs sm:text-sm font-semibold text-slate-700 pt-2">
+          
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+              <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+            </div>
+            <span>Serving Virar and the surrounding region since 2008</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+              <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+            </div>
+            <span>Phacoemulsification with foldable IOL implantation</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+              <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+            </div>
+            <span>Advanced digital imaging, laser and surgical technology</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+              <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+            </div>
+            <span>Separate operation theatre complex with air-locked lobbies</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+              <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+            </div>
+            <span>Comfortable, homely recovery rooms</span>
+          </div>
+
+          <div class="flex items-start space-x-3">
+            <div class="w-5 h-5 rounded-full bg-[#0c7d85] text-white flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+              <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
+            </div>
+            <span>Every subspecialty attended by a qualified ophthalmic surgeon</span>
+          </div>
+
+        </div>
+
+        <div class="pt-4">
+          <a href="about.html" class="inline-flex items-center space-x-2 text-[#0c7d85] font-bold text-sm hover:underline group">
+            <span>Read More About Us</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= 7 SPECIALTY CLINICS SECTION ================= -->
+  <section id="specialties" class="py-16 sm:py-24 px-6 sm:px-12 lg:px-20 bg-slate-50/60">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>OUR CLINICS</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+          Seven specialty clinics <span class="text-[#0c7d85]">under one roof</span>
+        </h2>
+
+        <p class="text-slate-600 text-sm sm:text-base font-medium leading-relaxed">
+          Each subspecialty is attended by the respective qualified ophthalmic surgeon, supported by advanced digital imaging, laser and surgical technology.
+        </p>
+      </div>
+
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold group-hover:bg-[#0c7d85] group-hover:text-white transition-colors duration-300">
+              <i data-lucide="eye" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Cataract Clinic</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Modern lens implants that can restore excellent vision without glasses.
+            </p>
+          </div>
+          <div>
+            <a href="service.html#cataract" class="inline-flex items-center space-x-1.5 text-[#0c7d85] font-bold text-xs hover:underline pt-2 group-hover:translate-x-0.5 transition-transform">
+              <span>Learn more</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold group-hover:bg-[#0c7d85] group-hover:text-white transition-colors duration-300">
+              <i data-lucide="scan" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Retina &amp; Cornea Clinic</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Care for the retina, cornea and the anterior structures of the eye.
+            </p>
+          </div>
+          <div>
+            <a href="service.html#retina-cornea" class="inline-flex items-center space-x-1.5 text-[#0c7d85] font-bold text-xs hover:underline pt-2 group-hover:translate-x-0.5 transition-transform">
+              <span>Learn more</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold group-hover:bg-[#0c7d85] group-hover:text-white transition-colors duration-300">
+              <i data-lucide="activity" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Glaucoma Clinic</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Early detection and pressure control to protect your sight from glaucoma.
+            </p>
+          </div>
+          <div>
+            <a href="service.html#glaucoma" class="inline-flex items-center space-x-1.5 text-[#0c7d85] font-bold text-xs hover:underline pt-2 group-hover:translate-x-0.5 transition-transform">
+              <span>Learn more</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold group-hover:bg-[#0c7d85] group-hover:text-white transition-colors duration-300">
+              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Lasik Clinic</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Fast, safe and virtually painless spectacle removal procedures.
+            </p>
+          </div>
+          <div>
+            <a href="service.html#lasik" class="inline-flex items-center space-x-1.5 text-[#0c7d85] font-bold text-xs hover:underline pt-2 group-hover:translate-x-0.5 transition-transform">
+              <span>Learn more</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold group-hover:bg-[#0c7d85] group-hover:text-white transition-colors duration-300">
+              <i data-lucide="baby" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Pediatric Clinic &amp; Squint Evaluation</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Specialized eye care for children and diagnostic squint services.
+            </p>
+          </div>
+          <div>
+            <a href="service.html#pediatric" class="inline-flex items-center space-x-1.5 text-[#0c7d85] font-bold text-xs hover:underline pt-2 group-hover:translate-x-0.5 transition-transform">
+              <span>Learn more</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-6 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold group-hover:bg-[#0c7d85] group-hover:text-white transition-colors duration-300">
+              <i data-lucide="sun" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Phacoemulsification</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Hygienic and patient-friendly micro-incision cataract surgery.
+            </p>
+          </div>
+          <div>
+            <a href="service.html#phaco" class="inline-flex items-center space-x-1.5 text-[#0c7d85] font-bold text-xs hover:underline pt-2 group-hover:translate-x-0.5 transition-transform">
+              <span>Learn more</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between space-y-6 group md:col-span-2 lg:col-span-1">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-2xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold group-hover:bg-[#0c7d85] group-hover:text-white transition-colors duration-300">
+              <i data-lucide="droplet" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900">Dry &amp; Lazy Eye Evaluation</h3>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              Assessment and management of dry eye and amblyopia (lazy eye).
+            </p>
+          </div>
+          <div>
+            <a href="service.html#dry-eye" class="inline-flex items-center space-x-1.5 text-[#0c7d85] font-bold text-xs hover:underline pt-2 group-hover:translate-x-0.5 transition-transform">
+              <span>Learn more</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-4">
+        <a href="service.html" class="inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] hover:shadow-lg hover:-translate-y-0.5 text-white font-bold text-sm px-8 py-3.5 rounded-full shadow-md transition-all duration-300">
+          <span>View All Services</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= WHY CHOOSE US (6 DARK CARDS) ================= -->
+  <section id="why-choose-us" class="py-20 px-6 sm:px-12 lg:px-20 text-white" style="background: radial-gradient(circle at top, #0f5b5f 0%, #0c474a 26%, #092d30 100%);">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-white text-xs font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>WHY CHOOSE US</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-white">
+          Care built around <span class="text-[#d7f9f6]">the patient</span>
+        </h2>
+
+        <p class="text-slate-300 text-sm sm:text-base font-normal leading-relaxed max-w-2xl mx-auto">
+          From the moment you walk in to the day you are discharged, every part of Anand Netralaya is arranged around your comfort and safety.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+        <div class="bg-[#12373a]/90 backdrop-blur-md p-8 rounded-3xl border border-white/8 hover:bg-[#193f42] hover:border-[#78e6db]/30 hover:-translate-y-1.5 transition-all duration-300 space-y-4 group shadow-[0_20px_40px_rgba(0,0,0,0.18)]">
+          <div class="w-12 h-12 rounded-2xl bg-[#1a4c51] text-[#d7f9f6] flex items-center justify-center font-bold group-hover:bg-[#8feee6] group-hover:text-[#0b2f32] transition-colors duration-300">
+            <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">Patient-Friendly Hospital</h3>
+          <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+            Comfortable, homely recovery rooms and personalised care at every step of your visit.
+          </p>
+        </div>
+
+        <div class="backdrop-blur-md p-8 rounded-3xl hover:-translate-y-1.5 transition-all duration-300 space-y-4 group shadow-[0_20px_40px_rgba(0,0,0,0.18)]" style="background: rgba(18, 55, 58, 0.9); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-bold transition-colors duration-300" style="background: rgba(26, 76, 81, 0.95); color: #d7f9f6;">
+            <i data-lucide="clock" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">No Prior Appointment Required</h3>
+          <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+            You are welcome to consult us without booking ahead, though an appointment is appreciated.
+          </p>
+        </div>
+
+        <div class="backdrop-blur-md p-8 rounded-3xl hover:-translate-y-1.5 transition-all duration-300 space-y-4 group shadow-[0_20px_40px_rgba(0,0,0,0.18)]" style="background: rgba(18, 55, 58, 0.9); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-bold transition-colors duration-300" style="background: rgba(26, 76, 81, 0.95); color: #d7f9f6;">
+            <i data-lucide="users" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">Walk-ins Always Welcome</h3>
+          <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+            Turn up during consulting hours and our reception team will register you straight away.
+          </p>
+        </div>
+
+        <div class="backdrop-blur-md p-8 rounded-3xl hover:-translate-y-1.5 transition-all duration-300 space-y-4 group shadow-[0_20px_40px_rgba(0,0,0,0.18)]" style="background: rgba(18, 55, 58, 0.9); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-bold transition-colors duration-300" style="background: rgba(26, 76, 81, 0.95); color: #d7f9f6;">
+            <i data-lucide="award" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">Peer-Approved Global Technology</h3>
+          <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+            We consistently import peer-approved digital imaging, laser and surgical technology from across the world.
+          </p>
+        </div>
+
+        <div class="backdrop-blur-md p-8 rounded-3xl hover:-translate-y-1.5 transition-all duration-300 space-y-4 group shadow-[0_20px_40px_rgba(0,0,0,0.18)]" style="background: rgba(18, 55, 58, 0.9); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-bold transition-colors duration-300" style="background: rgba(26, 76, 81, 0.95); color: #d7f9f6;">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">Dedicated Operation Theatre</h3>
+          <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+            A separate operation theatre complex with air-locked lobbies, kept strictly sterile.
+          </p>
+        </div>
+
+        <div class="backdrop-blur-md p-8 rounded-3xl hover:-translate-y-1.5 transition-all duration-300 space-y-4 group shadow-[0_20px_40px_rgba(0,0,0,0.18)]" style="background: rgba(18, 55, 58, 0.9); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center font-bold transition-colors duration-300" style="background: rgba(26, 76, 81, 0.95); color: #d7f9f6;">
+            <i data-lucide="stethoscope" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-extrabold text-white">Qualified Ophthalmic Anaesthetists</h3>
+          <p class="text-slate-200 text-xs sm:text-sm leading-relaxed">
+            Every surgery is assisted by qualified and experienced ophthalmic anaesthetists.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= DOCTOR PROFILE SECTION ================= -->
+  <section id="about-doctor" class="py-20 px-6 sm:px-12 lg:px-20 bg-white">
+    <div class="max-w-6xl mx-auto space-y-10">
+      
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-md bg-teal-50 text-[#0c7d85] text-xs font-bold uppercase tracking-wider">
+        <span>MEET THE DOCTOR</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 group">
+            <img src="dr-anand-rout.png.PNG" alt="Dr. Anand Rout" class="w-full h-full object-contain drop-shadow-2xl group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80'" />
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Dr. Anand Rout</h2>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-[#0c7d85] mt-1">Ophthalmologist / Eye Surgeon</h3>
+          </div>
+
+          <div class="space-y-3 text-slate-600 text-base leading-relaxed">
+            <p>
+              Dr. Anand Rout is a leading eye doctor in Virar with several years of experience in ophthalmology and eye surgery.
+            </p>
+            <p>
+              Under his care, Anand Netralaya provides high-quality, value-for-money eye care and has emerged as a preferred, recognised eye care facility.
+            </p>
+          </div>
+
+          <!-- Education Table -->
+          <div class="bg-slate-50 p-6 sm:p-7 rounded-3xl border border-slate-200/80 space-y-4 shadow-sm">
+            <div class="flex items-center space-x-2 text-[#0c7d85] font-extrabold text-xs tracking-wider uppercase">
+              <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+              <span>EDUCATION</span>
+            </div>
+
+            <div class="space-y-3.5 text-xs sm:text-sm">
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3.5">
+                <div>
+                  <span class="font-bold text-slate-900">MBBS</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">Lokmanya Tilak Municipal Medical College, Sion, Mumbai</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">2006</span>
+              </div>
+
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3.5">
+                <div>
+                  <span class="font-bold text-slate-900">DOMS (Ophthalmology)</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">Rajiv Gandhi University of Health Sciences, Bangalore</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">2010</span>
+              </div>
+
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3.5">
+                <div>
+                  <span class="font-bold text-slate-900">DNB</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">Deenanath Mangeshkar Hospital, Pune</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">2012</span>
+              </div>
+
+              <div class="flex justify-between items-start border-l-2 border-[#0c7d85] pl-3.5">
+                <div>
+                  <span class="font-bold text-slate-900">FICO</span>
+                  <span class="text-slate-500 block sm:inline sm:ml-1">International Council of Ophthalmology, United Kingdom</span>
+                </div>
+                <span class="font-bold text-[#0c7d85] ml-2 shrink-0">—</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Membership & Registration -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 transform cursor-pointer">
+              <div class="flex items-center space-x-2 text-teal-700 font-extrabold text-xs tracking-wider uppercase">
+                <i data-lucide="ribbon" class="w-4 h-4"></i>
+                <span>MEMBERSHIP</span>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-800">
+                Bombay Ophthalmologists' Association (BOA)
+              </p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm space-y-2 hover:border-teal-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 transform cursor-pointer">
+              <div class="flex items-center space-x-2 text-teal-700 font-extrabold text-xs tracking-wider uppercase">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+                <span>REGISTRATION</span>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-slate-800">
+                2008052089 • Maharashtra Medical Council, 2008
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= PROCESS STEPS (YOUR VISIT) ================= -->
+  <section id="process" class="py-16 sm:py-24 px-6 sm:px-12 lg:px-20 bg-white border-t border-slate-100">
+    <div class="max-w-6xl mx-auto space-y-12">
+      
+      <div class="text-center space-y-3 max-w-3xl mx-auto">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>YOUR VISIT</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          What to expect <span class="text-[#0c7d85]">on your visit</span>
+        </h2>
+        <p class="text-slate-500 text-sm sm:text-base font-medium">
+          Knowing the sequence in advance keeps your time with us short and your consultation focused.
+        </p>
+      </div>
+      
+      <!-- Timeline Container -->
+      <div class="relative pl-4 sm:pl-16 max-w-4xl">
+        <div class="absolute left-[22px] sm:left-[70px] top-6 bottom-6 w-[2.5px] bg-[#0c7d85]"></div>
+
+        <div class="space-y-10 sm:space-y-12 relative">
+
+          <div class="flex items-start gap-6 sm:gap-8 group">
+            <div class="relative z-10 w-12 h-12 rounded-full bg-[#0a6269] text-white font-black text-lg flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              1
+            </div>
+            <div class="pt-1 space-y-1">
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Book ahead if you can</h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                A prior appointment is highly appreciated. Please avoid taking appointments on the doctor's mobile phone.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 sm:gap-8 group">
+            <div class="relative z-10 w-12 h-12 rounded-full bg-[#0a6269] text-white font-black text-lg flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              2
+            </div>
+            <div class="pt-1 space-y-1">
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Appointments get priority</h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Patients with an appointment will be given priority.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 sm:gap-8 group">
+            <div class="relative z-10 w-12 h-12 rounded-full bg-[#0a6269] text-white font-black text-lg flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              3
+            </div>
+            <div class="pt-1 space-y-1">
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Register at reception</h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Register yourself with all demographic details at the reception.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 sm:gap-8 group">
+            <div class="relative z-10 w-12 h-12 rounded-full bg-[#0a6269] text-white font-black text-lg flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              4
+            </div>
+            <div class="pt-1 space-y-1">
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Enroll your name</h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Enroll your name at the reception.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 sm:gap-8 group">
+            <div class="relative z-10 w-12 h-12 rounded-full bg-[#0a6269] text-white font-black text-lg flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              5
+            </div>
+            <div class="pt-1 space-y-1">
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Preliminary examination</h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                A preliminary examination will be done in the refraction room.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 sm:gap-8 group">
+            <div class="relative z-10 w-12 h-12 rounded-full bg-[#0a6269] text-white font-black text-lg flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              6
+            </div>
+            <div class="pt-1 space-y-1">
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Dilating drops</h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Refraction will be followed by instillation of eye drops for dilatation for further examination.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6 sm:gap-8 group">
+            <div class="relative z-10 w-12 h-12 rounded-full bg-[#0a6269] text-white font-black text-lg flex items-center justify-center shrink-0 shadow-md group-hover:scale-110 transition-transform">
+              7
+            </div>
+            <div class="pt-1 space-y-1">
+              <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">Doctor consultation</h3>
+              <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                Detailed clinical assessment, diagnostic evaluation and treatment guidance with Dr. Anand Rout.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="text-center pt-6">
+        <a href="your-visit.html" class="inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] hover:shadow-lg hover:-translate-y-0.5 text-white font-bold text-xs sm:text-sm px-8 py-3.5 rounded-full shadow-md transition-all duration-300">
+          <span>See All Patient Guidelines</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= GALLERY SECTION ================= -->
+  <section id="gallery" class="py-20 px-6 sm:px-12 lg:px-20 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-bold text-[#0c7d85] uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-md">INFRASTRUCTURE</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Hospital Gallery</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm aspect-[4/3] bg-slate-100 group">
+          <img src="gallery-7.jpeg" alt="Gallery Image 7" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm aspect-[4/3] bg-slate-100 group">
+          <img src="gallery-8.jpeg" alt="Gallery Image 8" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm aspect-[4/3] bg-slate-100 group">
+          <img src="gallery-9.jpeg" alt="Gallery Image 9" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm aspect-[4/3] bg-slate-100 group">
+          <img src="gallery-10.jpeg" alt="Gallery Image 10" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm aspect-[4/3] bg-slate-100 group">
+          <img src="gallery-11.jpeg" alt="Gallery Image 11" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        </div>
+      </div>
+
+      <div class="text-center pt-4">
+        <a href="gallery.html" class="inline-flex items-center space-x-2 text-[#0c7d85] font-bold text-sm hover:underline group">
+          <span>View full gallery</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= TESTIMONIALS SECTION ================= -->
+  <section id="testimonials" class="py-20 px-6 sm:px-12 lg:px-20 bg-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center space-y-3 max-w-3xl mx-auto">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>PATIENT VOICES</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          What our patients <span class="text-[#0c7d85]">tell us</span>
+        </h2>
+      </div>
+
+      <!-- Marquee Slider Track -->
+      <div class="relative w-full overflow-hidden py-4">
+        <div class="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+        <div class="testimonial-track flex items-center gap-6 w-max animate-infinite-scroll hover:[animation-play-state:paused]">
+          
+          <div class="w-[300px] sm:w-[340px] bg-slate-50/80 p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shrink-0 space-y-6">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+              <i data-lucide="quote" class="w-5 h-5"></i>
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed min-h-[72px]">
+              The cataract surgery was smooth and completely painless. I got back my clear vision within a single day!
+            </p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Rajesh Sharma</h4>
+                <span class="text-[11px] font-bold text-[#0c7d85] uppercase tracking-wider">Cataract Clinic</span>
+              </div>
+              <div class="flex text-amber-400 text-xs">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="w-[300px] sm:w-[340px] bg-slate-50/80 p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shrink-0 space-y-6">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+              <i data-lucide="quote" class="w-5 h-5"></i>
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed min-h-[72px]">
+              Dr. Anand Rout explains everything patiently. The hospital staff is very welcoming and caring throughout.
+            </p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Priya Patel</h4>
+                <span class="text-[11px] font-bold text-[#0c7d85] uppercase tracking-wider">General Consultation</span>
+              </div>
+              <div class="flex text-amber-400 text-xs">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="w-[300px] sm:w-[340px] bg-slate-50/80 p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shrink-0 space-y-6">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+              <i data-lucide="quote" class="w-5 h-5"></i>
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed min-h-[72px]">
+              Got my spectacle removal done via LASIK. Modern equipment and highly professional environment.
+            </p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Amit Verma</h4>
+                <span class="text-[11px] font-bold text-[#0c7d85] uppercase tracking-wider">LASIK Clinic</span>
+              </div>
+              <div class="flex text-amber-400 text-xs">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="w-[300px] sm:w-[340px] bg-slate-50/80 p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shrink-0 space-y-6">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+              <i data-lucide="quote" class="w-5 h-5"></i>
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed min-h-[72px]">
+              Excellent experience for my child's eye checkup and squint evaluation. Very gentle approach.
+            </p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Sneha Joshi</h4>
+                <span class="text-[11px] font-bold text-[#0c7d85] uppercase tracking-wider">Pediatric Clinic</span>
+              </div>
+              <div class="flex text-amber-400 text-xs">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Duplicate Set for Seamless Animation -->
+          <div class="w-[300px] sm:w-[340px] bg-slate-50/80 p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shrink-0 space-y-6">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+              <i data-lucide="quote" class="w-5 h-5"></i>
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed min-h-[72px]">
+              The cataract surgery was smooth and completely painless. I got back my clear vision within a single day!
+            </p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Rajesh Sharma</h4>
+                <span class="text-[11px] font-bold text-[#0c7d85] uppercase tracking-wider">Cataract Clinic</span>
+              </div>
+              <div class="flex text-amber-400 text-xs">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="w-[300px] sm:w-[340px] bg-slate-50/80 p-7 rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 shrink-0 space-y-6">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+              <i data-lucide="quote" class="w-5 h-5"></i>
+            </div>
+            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed min-h-[72px]">
+              Dr. Anand Rout explains everything patiently. The hospital staff is very welcoming and caring throughout.
+            </p>
+            <div class="pt-2 border-t border-slate-200/60 flex items-center justify-between">
+              <div>
+                <h4 class="font-extrabold text-slate-900 text-sm sm:text-base">Priya Patel</h4>
+                <span class="text-[11px] font-bold text-[#0c7d85] uppercase tracking-wider">General Consultation</span>
+              </div>
+              <div class="flex text-amber-400 text-xs">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= FAQ SECTION ================= -->
+  <section id="faq" class="py-16 sm:py-24 px-6 sm:px-12 lg:px-20 bg-slate-50/60 border-t border-slate-200/60">
+    <div class="max-w-4xl mx-auto space-y-10">
+      
+      <div class="text-center space-y-3">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>QUESTIONS</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          Frequently asked <span class="text-[#0c7d85]">questions</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Do I need an appointment to visit Anand Netralaya?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            While walk-ins are always welcome during consulting hours, patients with prior appointments are given priority to minimize waiting time.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Where is Anand Netralaya located?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            Anand Netralaya Eye Care Hospital is conveniently located in Virar West, Maharashtra, offering accessible eye care facilities for all local and outstation patients.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">What are your phone numbers?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            You can reach our hospital reception directly at <a href="tel:+919923025465" class="text-[#0c7d85] font-bold hover:underline">+91 99230 25465</a> for consultations, booking inquiries, or emergency guidance.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Which eye conditions do you treat?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            We provide specialized care across seven specialty clinics including Cataract (Phacoemulsification), LASIK, Retina &amp; Cornea, Glaucoma, Pediatric &amp; Squint evaluation, and Dry/Lazy Eye management.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">How long does a typical visit take?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            A comprehensive consultation including vision testing and pupil dilation usually takes around 1.5 to 2 hours.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Can I drive home after my pupil is dilated?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            No. Dilating drops cause temporary blurriness and light sensitivity for 2 to 3 hours. We recommend bringing an accompanying person or arranging public transportation.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">What documents should I bring for my consultation?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            Please bring your previous medical prescriptions, past eye test reports, current spectacles, and a valid photo ID.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl border border-slate-200/80 p-5 sm:p-6 cursor-pointer faq-item shadow-sm hover:border-teal-200 transition-all">
+          <div class="flex justify-between items-center gap-4">
+            <h3 class="font-bold text-slate-900 text-sm sm:text-base">Is cashless insurance facility or claim assistance available?</h3>
+            <i data-lucide="chevron-down" class="w-5 h-5 text-[#0c7d85] transition-transform duration-300 faq-icon shrink-0"></i>
+          </div>
+          <p class="text-slate-600 text-xs sm:text-sm mt-3 hidden faq-answer leading-relaxed">
+            Yes, our desk assists with major medical insurance policies and reimbursement documentation for surgical procedures.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= CONTACT & MAP SECTION ================= -->
+  <section id="contact" class="py-20 px-6 sm:px-12 lg:px-20 bg-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="text-center space-y-3 max-w-3xl mx-auto">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-teal-50 border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>FIND US</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          Visit us in <span class="text-[#0c7d85]">Virar West</span>
+        </h2>
+        <p class="text-slate-500 text-sm sm:text-base font-medium">
+          We are at Kharodi Naka on Bolinj Road, a short ride from Virar station.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <div class="bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200/80 space-y-6 shadow-sm">
+            
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-2xl bg-teal-100/70 text-[#0c7d85] flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">ADDRESS</h3>
+                <p class="text-slate-600 text-sm mt-1 leading-relaxed">
+                  Anand Netralaya, Charbhuja Apartment,<br>
+                  Opp. Water Tank, Kharodi Naka, Bolinj Road,<br>
+                  Virar West, Vasai-Virar, Maharashtra 401303
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 border-t border-slate-200/60 pt-5">
+              <div class="w-12 h-12 rounded-2xl bg-teal-100/70 text-[#0c7d85] flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">CALL US</h3>
+                <p class="text-slate-600 text-sm mt-1 font-semibold space-y-0.5">
+                  <a href="tel:+919923025465" class="block hover:text-[#0c7d85] transition-colors">+91 99230 25465</a>
+                  <a href="tel:+919075035465" class="block hover:text-[#0c7d85] transition-colors">+91 90750 25465</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 border-t border-slate-200/60 pt-5">
+              <div class="w-12 h-12 rounded-2xl bg-teal-100/70 text-[#0c7d85] flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">EMAIL</h3>
+                <p class="text-slate-600 text-sm mt-1 font-semibold">
+                  <a href="mailto:anandnetralayavirar@gmail.com" class="hover:text-[#0c7d85] transition-colors">anandnetralayavirar@gmail.com</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 border-t border-slate-200/60 pt-5">
+              <div class="w-12 h-12 rounded-2xl bg-teal-100/70 text-[#0c7d85] flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-slate-900 text-sm uppercase tracking-wider">CONSULTING HOURS</h3>
+                <div class="text-slate-600 text-sm mt-1 font-medium space-y-1">
+                  <p><span class="font-semibold text-slate-800">Monday – Saturday:</span> 10:00 AM – 1:00 PM</p>
+                  <p><span class="font-semibold text-slate-800">Monday – Saturday (Evenings):</span> 5:00 PM – 8:00 PM</p>
+                  <p><span class="font-semibold text-slate-800">Sunday:</span> 10:00 AM – 12:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-200/60">
+              <a href="https://maps.app.goo.gl/kAsux3HTnC9Da5aND" target="_blank" class="inline-flex items-center space-x-2 text-[#0c7d85] font-bold text-xs hover:underline">
+                <i data-lucide="navigation" class="w-4 h-4"></i>
+                <span>Open in Google Maps</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Google Map Embed -->
+        <div class="lg:col-span-7 h-full min-h-[440px] rounded-3xl overflow-hidden border border-slate-200 shadow-md">
+          <iframe 
+            title="Anand Netralaya Google Maps Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.538555813354!2d72.802115!3d19.475454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7a9f8f4111111%3A0x1111111111111111!2sAnand%20Netralaya%20Eye%20Care%20Hospital!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            class="w-full h-full min-h-[440px] border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= PRE-FOOTER CALLOUT BANNER ================= -->
+  <section class="bg-[#e3f4f1] py-16 px-6 sm:px-12 text-center border-t border-[#cbe8e3]">
+    <div class="max-w-2xl mx-auto space-y-4">
+      <h2 class="text-3xl font-extrabold text-slate-900">Ready to book your eye check-up?</h2>
+      <div>
+       <a href="appointment.html" class="inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] hover:shadow-lg hover:-translate-y-0.5 text-white font-bold text-sm px-8 py-3.5 rounded-full shadow-md transition-all duration-300">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#052b2e] text-slate-300 py-12 px-6 sm:px-12 lg:px-20 border-t border-teal-950">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-xs">
+      
+      <div class="space-y-3">
+        <h3 class="text-base font-bold text-white">Anand Netralaya</h3>
+        <p class="text-slate-400 leading-relaxed">We help you see better &amp; hence live better</p>
+        <p class="text-slate-400 leading-relaxed">Trusted eye care in Virar West since 2008, led by Dr. Anand Rout.</p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">QUICK LINKS</h4>
+        <p><a href="index.html" class="hover:text-white transition-colors">Home</a></p>
+        <p><a href="about.html" class="hover:text-white transition-colors">About</a></p>
+        <p><a href="service.html" class="hover:text-white transition-colors">Services</a></p>
+        <p><a href="your-visit.html" class="hover:text-white transition-colors">Your Visit</a></p>
+        <p><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></p>
+        <p><a href="appointment.html" class="hover:text-white transition-colors">Book Appointment</a></p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">OUR CLINICS</h4>
+        <p><a href="service.html#cataract" class="hover:text-white transition-colors">Cataract Clinic</a></p>
+        <p><a href="service.html#retina-cornea" class="hover:text-white transition-colors">Retina &amp; Cornea Clinic</a></p>
+        <p><a href="service.html#glaucoma" class="hover:text-white transition-colors">Glaucoma Clinic</a></p>
+        <p><a href="service.html#lasik" class="hover:text-white transition-colors">Lasik Clinic</a></p>
+        <p><a href="service.html#pediatric" class="hover:text-white transition-colors">Pediatric Clinic &amp; Squint Evaluation</a></p>
+        <p><a href="service.html#phaco" class="hover:text-white transition-colors">Phacoemulsification</a></p>
+        <p><a href="service.html#dry-eye" class="hover:text-white transition-colors">Dry &amp; Lazy Eye Evaluation</a></p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">CONTACT US</h4>
+        <p class="flex items-start gap-2">
+          <i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+          <span>Charbhuja Apartment, Kharodi Naka, Bolinj Road, Virar West, Maharashtra 401303, India</span>
+        </p>
+        <p class="flex items-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i>
+          <a href="tel:+919923025465" class="hover:text-white transition-colors">+91 99230 25465</a>
+        </p>
+        <p class="flex items-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i>
+          <a href="tel:+919075035465" class="hover:text-white transition-colors">+91 90750 25465</a>
+        </p>
+        <p class="flex items-center gap-2">
+          <i data-lucide="mail" class="w-4 h-4 text-teal-400 shrink-0"></i>
+          <a href="mailto:anandnetralayavirar@gmail.com" class="hover:text-white transition-colors">anandnetralayavirar@gmail.com</a>
+        </p>
+        <p class="flex items-start gap-2 pt-1">
+          <i data-lucide="clock" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i>
+          <span>Monday – Saturday: 10:00 AM – 1:00 PM<br />Monday – Saturday (Evening): 5:00 PM – 8:00 PM<br />Sunday: 10:00 AM – 12:00 PM</span>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-teal-900/60 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+      <div>&copy; 2026 Anand Netralaya. All rights reserved.</div>
+      <div>Dr. Anand Rout - MBBS • DOMS • DNB • FICO (UK) Reg. 2008052089, Maharashtra Medical Council</div>
+    </div>
+  </footer>
+
+
+  <!-- ================= FLOATING ACTION BUTTONS ================= -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-center space-y-3">
+    <a href="https://wa.me/919923025465" target="_blank" aria-label="Chat on WhatsApp" class="w-12 h-12 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+      <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.52 3.48C18.26 1.22 15.2 0 12 0 5.37 0 0 5.37 0 12c0 2.11.56 4.18 1.63 5.98L0 24l6.27-1.64A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.22-6.25-3.48-8.52zM12 21.82a9.76 9.76 0 01-4.9-1.31l-.35-.21-3.72.97.99-3.63-.23-.37A9.77 9.77 0 012.18 12 9.82 9.82 0 0112 2.18c2.63 0 5.1 1.02 6.95 2.86A9.85 9.85 0 0121.82 12 9.82 9.82 0 0112 21.82zm5.1-7.3c-.22-.11-1.3-.64-1.5-.71-.2-.08-.35-.11-.5.12-.16.23-.6.71-.74.86-.14.15-.28.16-.52.06a6.38 6.38 0 01-1.92-.59 7.73 7.73 0 01-2.2-1.36 8.43 8.43 0 01-1.57-1.96c-.16-.27-.02-.41.12-.53.13-.13.3-.34.45-.5.15-.16.2-.28.3-.47.1-.19.05-.35-.02-.49-.06-.14-.5-1.2-.69-1.65-.18-.44-.37-.38-.5-.39h-.43c-.14 0-.37.05-.56.25-.18.2-.7.68-.7 1.66 0 .98.72 1.93.82 2.06.1.13 1.42 2.18 3.45 3.05 2.43 1.08 2.44.84 2.88.79.33-.04 1.06-.43 1.21-.85.15-.42.15-.79.1-.86-.05-.06-.21-.11-.43-.22z"/>
+      </svg>
+    </a>
+    
+    <a href="tel:+919923025465" aria-label="Call Hospital" class="w-12 h-12 bg-[#0a6269] text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+    </a>
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+    // Initialize Lucide Icons
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Scroll Transparency Header Effect
+    const header = document.getElementById('mainHeader');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.remove('bg-[#e3f4f1]/90', 'border-[#cbe8e3]');
+          header.classList.add('bg-white/90', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
+        } else {
+          header.classList.add('bg-[#e3f4f1]/90', 'border-[#cbe8e3]');
+          header.classList.remove('bg-white/90', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
+        }
+      });
+    }
+
+    // Mobile Menu Drawer Handler
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    // FAQ Accordion Toggle Handler
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.faq-icon');
+        
+        if (!answer) return;
+
+        const isHidden = answer.classList.contains('hidden');
+        
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+        document.querySelectorAll('.faq-icon').forEach(i => {
+          if (i) i.style.transform = 'rotate(0deg)';
+        });
+
+        if (isHidden) {
+          answer.classList.remove('hidden');
+          if (icon) icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Counter Animation Handler
+    function startCounterAnimation() {
+      const counters = document.querySelectorAll('.counter-number');
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 1200;
+        const start = performance.now();
+
+        function step(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const currentCount = Math.floor(progress * target);
+
+          counter.innerText = currentCount.toLocaleString();
+
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            counter.innerText = target.toLocaleString();
+          }
+        }
+
+        requestAnimationFrame(step);
+      });
+    }
+
+    let animated = false;
+    const metricsSection = document.getElementById('metrics-section');
+
+    if (metricsSection) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animated) {
+            startCounterAnimation();
+            animated = true;
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(metricsSection);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - 7 Specialty Clinics | Anand Netralaya</title>
+  
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-[#0c7d85] selection:text-white overflow-x-hidden">
+
+  <!-- Header / Navigation Bar -->
+  <header id="mainHeader" class="sticky top-0 z-50 bg-[#e3f4f1] border-b border-[#cbe8e3] w-full transition-all duration-300 ease-in-out">
+    <nav class="w-full px-6 sm:px-12 lg:px-20 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center space-x-3.5 group">
+        <div class="relative w-9 h-9 flex items-center justify-center shrink-0 text-[#0c7d85]">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+            <circle cx="12" cy="12" r="3" fill="currentColor" />
+          </svg>
+          <span class="absolute top-1 right-1 w-2.5 h-1 bg-[#e8a838] rounded-full"></span>
+        </div>
+        <div>
+          <div class="text-xl font-black tracking-tight leading-none">
+            <span class="text-slate-900">Anand </span>
+            <span class="text-[#0c7d85]">Netralaya</span>
+          </div>
+          <span class="text-[9px] tracking-[0.24em] text-slate-500 font-bold uppercase block mt-1">EYE CARE HOSPITAL</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <div class="hidden lg:flex items-center space-x-10 text-[15px] font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-[#0c7d85] transition-colors">Home</a>
+        <a href="about.html" class="hover:text-[#0c7d85] transition-colors">About</a>
+        <a href="service.html" class="text-[#0c7d85] font-bold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2.5px] after:bg-[#e8a838]">Services</a>
+        <a href="your-visit.html" class="hover:text-[#0c7d85] transition-colors">Your Visit</a>
+        <a href="gallery.html" class="hover:text-[#0c7d85] transition-colors">Gallery</a>
+        <a href="contact.html" class="hover:text-[#0c7d85] transition-colors">Contact</a>
+      </div>
+
+      <!-- Right Callout & Action Button -->
+      <div class="flex items-center space-x-6">
+        <a href="tel:+919923025465" class="hidden xl:flex items-center gap-2 text-[15px] font-bold text-[#0c7d85] hover:opacity-80 transition-opacity">
+          <i data-lucide="phone" class="w-4 h-4 text-[#0c7d85] stroke-[2.5]"></i>
+          <span>+91 99230 25465</span>
+        </a>
+
+        <a href="contact.html#booking-form" class="hidden sm:inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md transition-all">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-teal-100/50 focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6" id="menuIcon"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-[#e3f4f1] border-b border-[#cbe8e3] px-6 pt-3 pb-6 space-y-3 font-semibold text-slate-700 shadow-lg">
+      <a href="index.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Home</a>
+      <a href="about.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">About</a>
+      <a href="service.html" class="mobile-nav-link block py-2 border-b border-teal-100 text-[#0c7d85] font-bold">Services</a>
+      <a href="your-visit.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Your Visit</a>
+      <a href="gallery.html" class="mobile-nav-link block py-2 border-b border-teal-100 hover:text-[#0c7d85]">Gallery</a>
+      <div class="pt-3">
+        <a href="contact.html#booking-form" class="mobile-nav-link w-full inline-flex items-center justify-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm py-3 rounded-full shadow-md transition-all">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Banner Section -->
+  <section class="bg-[#e3f4f1] border-b border-[#cbe8e3] pt-8 pb-14 px-6 sm:px-12 lg:px-20 w-full">
+    <div class="max-w-7xl mx-auto space-y-4">
+      <nav class="flex items-center space-x-2 text-xs font-semibold text-slate-500">
+        <a href="index.html" class="hover:text-[#0c7d85] transition-colors">Home</a>
+        <span>&gt;</span>
+        <span class="text-[#0c7d85] font-bold">Services</span>
+      </nav>
+
+      <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white/80 border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+        <span>OUR CLINICS</span>
+      </div>
+
+      <div class="space-y-2">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
+          Seven specialty clinics, <span class="text-[#0c7d85]">one hospital</span>
+        </h1>
+        <p class="text-slate-600 text-base sm:text-lg font-medium max-w-2xl">
+          From routine refraction to cataract and LASIK surgery, every subspecialty at Anand Netralaya is attended by the respective qualified ophthalmic surgeon.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services List Section -->
+  <section class="py-16 lg:py-24 px-6 sm:px-12 lg:px-20 bg-white">
+    <div class="max-w-7xl mx-auto space-y-16 lg:space-y-24">
+
+      <!-- 1. Cataract Clinic -->
+      <div id="cataract" class="bg-slate-50/60 p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+          <div class="w-full max-w-md bg-white p-2.5 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Cataract Clinic" class="w-full h-full object-cover rounded-xl">
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-5 order-1 lg:order-2">
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+            <i data-lucide="eye" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Cataract Clinic</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Today, due to remarkable advancements in IOL technology, a patient can achieve excellent vision quality from a lens implant without needing glasses at all. A lens implant, or intraocular lens (IOL), is an implanted synthetic lens that replaces the eye's natural lens. Depending on the type selected, an IOL can also correct the eye's existing refractive error (nearsightedness or farsightedness), and a patient who has received an IOL can still have their vision further improved with laser vision correction.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 pt-1">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Foldable intraocular lens (IOL) implantation</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> IOL options that also correct nearsightedness or farsightedness</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Vision can be further refined later with laser correction</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Surgery performed in a dedicated, air-locked operation theatre</li>
+          </ul>
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openDetailModal('cataract')" class="inline-flex items-center space-x-1.5 text-slate-700 font-bold text-xs bg-white border border-slate-300 px-4 py-2 rounded-full hover:bg-slate-50 transition-all">
+              <span>Full details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#0c7d85]"></i>
+            </button>
+            <a href="contact.html#booking-form" class="inline-flex items-center space-x-1 text-[#0c7d85] font-bold text-xs hover:underline">
+              <span>Book this clinic -&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Retina & Cornea Clinic -->
+      <div id="retina-cornea" class="bg-slate-50/60 p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+            <i data-lucide="scan" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Retina &amp; Cornea Clinic</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            The retina is the innermost nerve layer lining the back of the eye — many ophthalmologists compare it to the film of a camera. The retina processes the images projected onto it, and the optic nerve then transmits these to the brain. The retina is susceptible to many types of disease. At Anand Netralaya Hospital we are also dedicated to treating problems involving the cornea and other anterior structures of the eye such as the eyelids, conjunctiva, sclera, anterior chamber, iris and lens.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 pt-1">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Diagnosis and treatment of retinal disease</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Corneal care and management</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Treatment of the eyelids, conjunctiva and sclera</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Anterior chamber, iris and lens evaluation</li>
+          </ul>
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openDetailModal('retina-cornea')" class="inline-flex items-center space-x-1.5 text-slate-700 font-bold text-xs bg-white border border-slate-300 px-4 py-2 rounded-full hover:bg-slate-50 transition-all">
+              <span>Full details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#0c7d85]"></i>
+            </button>
+            <a href="contact.html#booking-form" class="inline-flex items-center space-x-1 text-[#0c7d85] font-bold text-xs hover:underline">
+              <span>Book this clinic -&gt;</span>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-md bg-white p-2.5 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Retina Diagram" class="w-full h-full object-cover rounded-xl">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Glaucoma Clinic -->
+      <div id="glaucoma" class="bg-slate-50/60 p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+          <div class="w-full max-w-md bg-white p-2.5 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=800&q=80" alt="Glaucoma Pressure" class="w-full h-full object-cover rounded-xl">
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-5 order-1 lg:order-2">
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+            <i data-lucide="activity" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Glaucoma Clinic</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Glaucoma is one of the major causes of blindness. It is a group of conditions in which high pressure inside the eye (intraocular pressure) damages the optic nerve. Glaucoma usually affects both eyes. It is very hard to stop glaucoma completely, but years of research show that treating the disease early helps preserve vision. The primary effect of any glaucoma treatment is lowering IOP, which has been proven to be an effective way to prevent or slow vision loss.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 pt-1">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Intraocular pressure (IOP) measurement and monitoring</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Optic nerve assessment</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Early treatment to help preserve vision</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Long-term follow-up for both eyes</li>
+          </ul>
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openDetailModal('glaucoma')" class="inline-flex items-center space-x-1.5 text-slate-700 font-bold text-xs bg-white border border-slate-300 px-4 py-2 rounded-full hover:bg-slate-50 transition-all">
+              <span>Full details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#0c7d85]"></i>
+            </button>
+            <a href="contact.html#booking-form" class="inline-flex items-center space-x-1 text-[#0c7d85] font-bold text-xs hover:underline">
+              <span>Book this clinic -&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Lasik Clinic -->
+      <div id="lasik" class="bg-slate-50/60 p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Lasik Clinic</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            We offer a wide range of LASIK procedures for the diverse requirements of our patients. It is natural to be a little apprehensive about a medical procedure involving your eyes, but with LASIK there is no need to be afraid — it is one of the safest and most reliable procedures available.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 pt-1">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> LASIK is the most popular elective procedure in the world</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Over 32 million people worldwide owe their clear vision to LASIK</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> LASIK has been successfully used to correct vision since 1991</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> LASIK is fast, safe and virtually painless</li>
+          </ul>
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openDetailModal('lasik')" class="inline-flex items-center space-x-1.5 text-slate-700 font-bold text-xs bg-white border border-slate-300 px-4 py-2 rounded-full hover:bg-slate-50 transition-all">
+              <span>Full details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#0c7d85]"></i>
+            </button>
+            <a href="contact.html#booking-form" class="inline-flex items-center space-x-1 text-[#0c7d85] font-bold text-xs hover:underline">
+              <span>Book this clinic -&gt;</span>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-md bg-white p-2.5 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="LASIK Laser Process" class="w-full h-full object-cover rounded-xl">
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Pediatric Clinic & Squint Evaluation -->
+      <div id="pediatric" class="bg-slate-50/60 p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+          <div class="w-full max-w-md bg-white p-2.5 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Squint Evaluation" class="w-full h-full object-cover rounded-xl">
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-5 order-1 lg:order-2">
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+            <i data-lucide="baby" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Pediatric Clinic &amp; Squint Evaluation</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            We provide treatment for an extensive range of paediatric eye problems, including sight-threatening conditions such as paediatric glaucoma, cataract and congenital opacities of the cornea. We also provide the latest available Diagnostic Squint Service. Squint is a misalignment of the two eyes, so that both eyes are not looking in the same direction. This misalignment may be constant, present throughout the day, or it may appear only sometimes, with the eyes straight the rest of the time.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 pt-1">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Paediatric glaucoma and cataract treatment</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Congenital opacities of the cornea</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Latest available Diagnostic Squint Service</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Assessment of both constant and intermittent squint</li>
+          </ul>
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openDetailModal('pediatric')" class="inline-flex items-center space-x-1.5 text-slate-700 font-bold text-xs bg-white border border-slate-300 px-4 py-2 rounded-full hover:bg-slate-50 transition-all">
+              <span>Full details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#0c7d85]"></i>
+            </button>
+            <a href="contact.html#booking-form" class="inline-flex items-center space-x-1 text-[#0c7d85] font-bold text-xs hover:underline">
+              <span>Book this clinic -&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Phacoemulsification -->
+      <div id="phaco" class="bg-slate-50/60 p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-5">
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+            <i data-lucide="sun" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Phacoemulsification</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Our patients can avail hygienic and patient-friendly phacoemulsification with a foldable lens. Phacoemulsification refers to modern cataract surgery in which the eye's internal lens is emulsified with an ultrasonic handpiece and aspirated from the eye. Aspirated fluids are replaced with irrigation of balanced salt solution, thus maintaining the anterior chamber as well as cooling the handpiece.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 pt-1">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Foldable lens implantation</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Ultrasonic emulsification of the natural lens</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Balanced salt solution maintains the anterior chamber</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Hygienic, patient-friendly surgical environment</li>
+          </ul>
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openDetailModal('phaco')" class="inline-flex items-center space-x-1.5 text-slate-700 font-bold text-xs bg-white border border-slate-300 px-4 py-2 rounded-full hover:bg-slate-50 transition-all">
+              <span>Full details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#0c7d85]"></i>
+            </button>
+            <a href="contact.html#booking-form" class="inline-flex items-center space-x-1 text-[#0c7d85] font-bold text-xs hover:underline">
+              <span>Book this clinic -&gt;</span>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="w-full max-w-md bg-white p-2.5 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden aspect-[4/3]">
+            <img src="https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?auto=format&fit=crop&w=800&q=80" alt="Phacoemulsification Handpiece" class="w-full h-full object-cover rounded-xl">
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. Dry & Lazy Eye Evaluation -->
+      <div id="dry-eye" class="bg-slate-50/60 p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-5 flex justify-center order-2 lg:order-1">
+          <div class="w-full max-w-md bg-white p-2.5 rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden aspect-[4/3]">
+            <img src="eye-care.webp" alt="Tear Duct and Dry Eye" class="w-full h-full object-cover rounded-xl" onerror="this.src='https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80'">
+          </div>
+        </div>
+        <div class="lg:col-span-7 space-y-5 order-1 lg:order-2">
+          <div class="w-10 h-10 rounded-xl bg-teal-50 text-[#0c7d85] flex items-center justify-center font-bold">
+            <i data-lucide="droplet" class="w-5 h-5"></i>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-900">Dry &amp; Lazy Eye Evaluation</h2>
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+            Dry eye is a condition resulting from inadequate or ineffective wetting and lubrication of the eye. It primarily occurs due to a reduction in the quality or quantity of tears and the tear film. Amblyopia (lazy eye) is poor vision in an eye that did not develop normally during childhood. It commonly affects one eye but may involve both. It is generally caused by lack of use of one eye, when the brain "favours" one eye over the other.
+          </p>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs sm:text-sm font-semibold text-slate-700 pt-1">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Evaluation of tear quality and quantity</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Tear film assessment</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Amblyopia (lazy eye) diagnosis</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85]"></span> Management for one or both affected eyes</li>
+          </ul>
+          <div class="pt-2 flex items-center gap-4">
+            <button onclick="openDetailModal('dry-eye')" class="inline-flex items-center space-x-1.5 text-slate-700 font-bold text-xs bg-white border border-slate-300 px-4 py-2 rounded-full hover:bg-slate-50 transition-all">
+              <span>Full details</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-[#0c7d85]"></i>
+            </button>
+            <a href="contact.html#booking-form" class="inline-flex items-center space-x-1 text-[#0c7d85] font-bold text-xs hover:underline">
+              <span>Book this clinic -&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Pre-Footer Callout Banner -->
+  <section class="bg-gradient-to-r from-[#0a6269] via-[#0c7d85] to-[#12a1a8] py-14 px-6 sm:px-12 lg:px-20 text-white">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      
+      <div class="space-y-2 text-center lg:text-left">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Ready to book your eye check-up?</h2>
+        <p class="text-teal-100 text-sm sm:text-base">
+          No prior appointment is required and walk-ins are always welcome — but booking ahead means you are seen first.
+        </p>
+        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm font-semibold text-teal-100 pt-2">
+          <a href="tel:+919923025465" class="flex items-center gap-1.5 hover:text-white"><i data-lucide="phone" class="w-4 h-4"></i> +91 99230 25465</a>
+          <a href="tel:+919075035465" class="flex items-center gap-1.5 hover:text-white"><i data-lucide="phone" class="w-4 h-4"></i> +91 90750 35465</a>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4 shrink-0">
+        <a href="contact.html#booking-form" class="bg-white text-[#0a6269] hover:bg-teal-50 font-bold text-sm px-7 py-3.5 rounded-full shadow-lg transition-all flex items-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+        <a href="contact.html" class="border border-white/80 hover:bg-white/10 text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all">
+          Contact Us
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#052b2e] text-slate-300 py-12 px-6 sm:px-12 lg:px-20 border-t border-teal-950">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-xs">
+      
+      <div class="space-y-3">
+        <h3 class="text-base font-bold text-white">Anand Netralaya</h3>
+        <p class="text-slate-400 leading-relaxed">We help you see better &amp; hence live better</p>
+        <p class="text-slate-400 leading-relaxed">Trusted eye care in Virar West since 2008, led by Dr. Anand Rout.</p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">QUICK LINKS</h4>
+        <p><a href="index.html" class="hover:text-white">Home</a></p>
+        <p><a href="about.html" class="hover:text-white">About</a></p>
+        <p><a href="service.html" class="hover:text-white">Services</a></p>
+        <p><a href="your-visit.html" class="hover:text-white">Your Visit</a></p>
+        <p><a href="gallery.html" class="hover:text-white">Gallery</a></p>
+        <p><a href="contact.html" class="hover:text-white">Contact</a></p>
+      </div>
+
+      <div class="space-y-2">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">OUR CLINICS</h4>
+        <p><a href="#cataract" class="hover:text-white">Cataract Clinic</a></p>
+        <p><a href="#retina-cornea" class="hover:text-white">Retina &amp; Cornea Clinic</a></p>
+        <p><a href="#glaucoma" class="hover:text-white">Glaucoma Clinic</a></p>
+        <p><a href="#lasik" class="hover:text-white">Lasik Clinic</a></p>
+        <p><a href="#pediatric" class="hover:text-white">Pediatric Clinic &amp; Squint Evaluation</a></p>
+        <p><a href="#phaco" class="hover:text-white">Phacoemulsification</a></p>
+        <p><a href="#dry-eye" class="hover:text-white">Dry &amp; Lazy Eye Evaluation</a></p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-bold text-white uppercase text-[11px] tracking-wider mb-3">CONTACT US</h4>
+        <p class="flex items-start gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal-400 shrink-0 mt-0.5"></i> Charbhuja Apartment, Kharodi Naka, Bolinj Road, Virar West, Maharashtra 401303, India</p>
+        <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i> +91 99230 25465</p>
+        <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-teal-400 shrink-0"></i> +91 90750 35465</p>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-teal-900/60 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-400 gap-2">
+      <div>&copy; 2026 Anand Netralaya. All rights reserved.</div>
+      <div>Dr. Anand Rout - MBBS • DOMS • DNB • FICO (UK) Reg. 2008052089, Maharashtra Medical Council</div>
+    </div>
+  </footer>
+
+  <!-- Full Details Interactive Sub-Page Modal -->
+  <div id="detailModal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm overflow-y-auto p-4 sm:p-6 lg:p-10 flex justify-center items-start">
+    <div class="bg-white rounded-3xl max-w-4xl w-full p-6 sm:p-10 shadow-2xl space-y-8 relative my-auto">
+      
+      <!-- Modal Close Button -->
+      <button onclick="closeDetailModal()" class="absolute top-6 right-6 p-2 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Breadcrumb -->
+      <nav class="flex items-center space-x-2 text-xs font-semibold text-slate-500">
+        <a href="index.html" class="hover:text-[#0c7d85]">Home</a>
+        <span>&gt;</span>
+        <a href="service.html" class="hover:text-[#0c7d85]">Services</a>
+        <span>&gt;</span>
+        <span id="modalBreadcrumb" class="text-[#0c7d85] font-bold">Clinic Details</span>
+      </nav>
+
+      <!-- Modal Title -->
+      <div class="space-y-1">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-teal-50 text-[#0c7d85] text-xs font-bold uppercase tracking-wider">
+          <span>SPECIALTY CLINIC</span>
+        </div>
+        <h2 id="modalTitle" class="text-3xl font-extrabold text-slate-900">Clinic Title</h2>
+        <p id="modalTagline" class="text-slate-500 text-sm font-medium">Subtitle</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Content Left -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-3">
+            <h3 class="text-lg font-bold text-slate-900">About this clinic</h3>
+            <p id="modalBody" class="text-slate-600 text-sm leading-relaxed">Detailed description goes here.</p>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/80 space-y-3">
+            <h4 class="text-xs font-bold uppercase text-[#0c7d85] tracking-wider">What this clinic covers</h4>
+            <ul id="modalCoverList" class="grid grid-cols-1 gap-2 text-xs font-semibold text-slate-700">
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sidebar Right -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-[#07383c] text-white p-6 rounded-2xl space-y-4 shadow-md">
+            <div>
+              <h4 class="font-extrabold text-base text-white">Consult Dr. Anand Rout</h4>
+              <p class="text-[11px] text-teal-300 font-bold">MBBS • DOMS • DNB • FICO (UK)</p>
+            </div>
+            <p class="text-xs text-teal-100/80 leading-relaxed">
+              No prior appointment is required and walk-ins are always welcome — but booking ahead means you are seen first.
+            </p>
+            <div class="space-y-2 pt-1">
+              <a href="contact.html#booking-form" class="w-full inline-flex items-center justify-center space-x-2 bg-white text-[#0a6269] font-bold text-xs py-3 rounded-full hover:bg-teal-50">
+                <i data-lucide="calendar" class="w-4 h-4"></i>
+                <span>Book Appointment</span>
+              </a>
+              <a href="tel:+919923025465" class="w-full inline-flex items-center justify-center space-x-2 bg-teal-900/80 border border-teal-700 text-white font-bold text-xs py-3 rounded-full hover:bg-teal-900">
+                <i data-lucide="phone" class="w-4 h-4 text-teal-400"></i>
+                <span>+91 99230 25465</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-2xl border border-slate-200/80 space-y-2 text-xs">
+            <h5 class="font-bold text-slate-900 uppercase text-[10px] tracking-wider text-slate-400">OTHER CLINICS</h5>
+            <div class="space-y-1.5 font-semibold text-slate-700">
+              <p><a href="#cataract" onclick="closeDetailModal()" class="hover:text-[#0c7d85] flex items-center justify-between">Cataract Clinic <span>&rarr;</span></a></p>
+              <p><a href="#retina-cornea" onclick="closeDetailModal()" class="hover:text-[#0c7d85] flex items-center justify-between">Retina &amp; Cornea Clinic <span>&rarr;</span></a></p>
+              <p><a href="#glaucoma" onclick="closeDetailModal()" class="hover:text-[#0c7d85] flex items-center justify-between">Glaucoma Clinic <span>&rarr;</span></a></p>
+              <p><a href="#lasik" onclick="closeDetailModal()" class="hover:text-[#0c7d85] flex items-center justify-between">Lasik Clinic <span>&rarr;</span></a></p>
+              <p><a href="#pediatric" onclick="closeDetailModal()" class="hover:text-[#0c7d85] flex items-center justify-between">Pediatric &amp; Squint Clinic <span>&rarr;</span></a></p>
+              <p><a href="#phaco" onclick="closeDetailModal()" class="hover:text-[#0c7d85] flex items-center justify-between">Phacoemulsification <span>&rarr;</span></a></p>
+              <p><a href="#dry-eye" onclick="closeDetailModal()" class="hover:text-[#0c7d85] flex items-center justify-between">Dry &amp; Lazy Eye Evaluation <span>&rarr;</span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  // Initialize Lucide Icons safely
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+
+  // Header Transparency on Scroll
+  const header = document.getElementById('mainHeader');
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.remove('bg-[#e3f4f1]', 'border-[#cbe8e3]');
+        header.classList.add('bg-white/70', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
+      } else {
+        header.classList.add('bg-[#e3f4f1]', 'border-[#cbe8e3]');
+        header.classList.remove('bg-white/70', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
+      }
+    });
+  }
+
+  // Mobile Menu Drawer Handler
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  }
+
+  // Clinic Modal Content Database
+  const clinicDetailsData = {
+    'cataract': {
+      title: 'Cataract Clinic',
+      tagline: 'Modern lens implants that can restore excellent vision without glasses.',
+      body: 'Today, due to remarkable advancements in IOL technology, a patient can achieve excellent vision quality from a lens implant without needing glasses at all. A lens implant, or intraocular lens (IOL), is an implanted synthetic lens that replaces the eye\'s natural lens. Depending on the type selected, an IOL can also correct the eye\'s existing refractive error (nearsightedness or farsightedness), and a patient who has received an IOL can still have their vision further improved with laser vision correction.',
+      covers: [
+        'Foldable intraocular lens (IOL) implantation',
+        'IOL options that also correct nearsightedness or farsightedness',
+        'Vision can be further refined later with laser correction',
+        'Surgery performed in a dedicated, air-locked operation theatre'
+      ]
+    },
+    'retina-cornea': {
+      title: 'Retina & Cornea Clinic',
+      tagline: 'Comprehensive retinal and corneal diagnostic screening and care.',
+      body: 'The retina is the innermost nerve layer lining the back of the eye — many ophthalmologists compare it to the film of a camera. The retina processes the images projected onto it, and the optic nerve then transmits these to the brain. The retina is susceptible to many types of disease. At Anand Netralaya Hospital we are also dedicated to treating problems involving the cornea and other anterior structures of the eye such as the eyelids, conjunctiva, sclera, anterior chamber, iris and lens.',
+      covers: [
+        'Diagnosis and treatment of retinal disease',
+        'Corneal care and management',
+        'Treatment of the eyelids, conjunctiva and sclera',
+        'Anterior chamber, iris and lens evaluation'
+      ]
+    },
+    'glaucoma': {
+      title: 'Glaucoma Clinic',
+      tagline: 'Early detection and pressure control to protect your sight from glaucoma.',
+      body: 'Glaucoma is one of the major causes of blindness. It is a group of conditions in which high pressure inside the eye (intraocular pressure) damages the optic nerve. Glaucoma usually affects both eyes. It is very hard to stop glaucoma completely, but years of research show that treating the disease early helps preserve vision. The primary effect of any glaucoma treatment is lowering IOP, which has been proven to be an effective way to prevent or slow vision loss.',
+      covers: [
+        'Intraocular pressure (IOP) measurement and monitoring',
+        'Optic nerve assessment',
+        'Early treatment to help preserve vision',
+        'Long-term follow-up for both eyes'
+      ]
+    },
+    'lasik': {
+      title: 'Lasik Clinic',
+      tagline: 'Fast, safe and virtually painless spectacle removal procedures.',
+      body: 'We offer a wide range of LASIK procedures for the diverse requirements of our patients. It is natural to be a little apprehensive about a medical procedure involving your eyes, but with LASIK there is no need to be afraid — it is one of the safest and most reliable procedures available.',
+      covers: [
+        'LASIK is the most popular elective procedure in the world',
+        'Over 32 million people worldwide owe their clear vision to LASIK',
+        'LASIK has been successfully used to correct vision since 1991',
+        'LASIK is fast, safe and virtually painless'
+      ]
+    },
+    'pediatric': {
+      title: 'Pediatric Clinic & Squint Evaluation',
+      tagline: 'Specialized eye care for children and diagnostic squint services.',
+      body: 'We provide treatment for an extensive range of paediatric eye problems, including sight-threatening conditions such as paediatric glaucoma, cataract and congenital opacities of the cornea. We also provide the latest available Diagnostic Squint Service. Squint is a misalignment of the two eyes, so that both eyes are not looking in the same direction.',
+      covers: [
+        'Paediatric glaucoma and cataract treatment',
+        'Congenital opacities of the cornea',
+        'Latest available Diagnostic Squint Service',
+        'Assessment of both constant and intermittent squint'
+      ]
+    },
+    'phaco': {
+      title: 'Phacoemulsification',
+      tagline: 'Hygienic and patient-friendly micro-incision cataract surgery.',
+      body: 'Our patients can avail hygienic and patient-friendly phacoemulsification with a foldable lens. Phacoemulsification refers to modern cataract surgery in which the eye\'s internal lens is emulsified with an ultrasonic handpiece and aspirated from the eye. Aspirated fluids are replaced with irrigation of balanced salt solution, thus maintaining the anterior chamber as well as cooling the handpiece.',
+      covers: [
+        'Foldable lens implantation',
+        'Ultrasonic emulsification of the natural lens',
+        'Balanced salt solution maintains the anterior chamber',
+        'Hygienic, patient-friendly surgical environment'
+      ]
+    },
+    'dry-eye': {
+      title: 'Dry & Lazy Eye Evaluation',
+      tagline: 'Assessment and management of dry eye and amblyopia (lazy eye).',
+      body: 'Dry eye is a condition resulting from inadequate or ineffective wetting and lubrication of the eye. It primarily occurs due to a reduction in the quality or quantity of tears and the tear film. Amblyopia (lazy eye) is poor vision in an eye that did not develop normally during childhood. It commonly affects one eye but may involve both. It is generally caused by lack of use of one eye, when the brain "favours" one eye over the other.',
+      covers: [
+        'Evaluation of tear quality and quantity',
+        'Tear film assessment',
+        'Amblyopia (lazy eye) diagnosis',
+        'Management for one or both affected eyes'
+      ]
+    }
+  };
+
+  function openDetailModal(clinicKey) {
+    const data = clinicDetailsData[clinicKey];
+    if (!data) return;
+
+    const modalBreadcrumb = document.getElementById('modalBreadcrumb');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalTagline = document.getElementById('modalTagline');
+    const modalBody = document.getElementById('modalBody');
+    const coverList = document.getElementById('modalCoverList');
+    const detailModal = document.getElementById('detailModal');
+
+    if (modalBreadcrumb) modalBreadcrumb.innerText = data.title;
+    if (modalTitle) modalTitle.innerText = data.title;
+    if (modalTagline) modalTagline.innerText = data.tagline;
+    if (modalBody) modalBody.innerText = data.body;
+
+    if (coverList) {
+      coverList.innerHTML = '';
+      data.covers.forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'flex items-center gap-2';
+        li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85] shrink-0"></span> <span>${item}</span>`;
+        coverList.appendChild(li);
+      });
+    }
+
+    if (detailModal) {
+      detailModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden'; // Stop background scrolling
+    }
+  }
+
+  function closeDetailModal() {
+    const detailModal = document.getElementById('detailModal');
+    if (detailModal) {
+      detailModal.classList.add('hidden');
+      document.body.style.overflow = ''; // Restore background scrolling
+    }
+  }
+
+  // Close modal on Escape key press or clicking backdrop
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeDetailModal();
+  });
+
+  const detailModal = document.getElementById('detailModal');
+  if (detailModal) {
+    detailModal.addEventListener('click', (e) => {
+      if (e.target === detailModal) {
+        closeDetailModal();
+      }
+    });
+  }
+</script>
+</body>
+</html>

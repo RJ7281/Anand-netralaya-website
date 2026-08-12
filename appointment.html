@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Appointment | Anand Netralaya Eye Care Hospital</title>
+  
+  <!-- Eye Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c7d85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z'/><circle cx='12' cy='12' r='3' fill='%230c7d85'/></svg>">
+
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Security Headers -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0c7d85;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 antialiased selection:bg-[#0c7d85] selection:text-white min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header id="mainHeader" class="sticky top-0 z-50 bg-[#e3f4f1]/90 backdrop-blur-md border-b border-[#cbe8e3] w-full transition-all duration-300">
+    <nav class="w-full px-6 sm:px-12 lg:px-20 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center space-x-3.5 group">
+        <div class="relative w-10 h-10 flex items-center justify-center shrink-0 text-[#0c7d85] group-hover:scale-110 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" class="w-9 h-9">
+            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+            <circle cx="12" cy="12" r="3" fill="currentColor" />
+          </svg>
+          <span class="absolute top-1 right-1 w-2.5 h-1 bg-[#e8a838] rounded-full"></span>
+        </div>
+        <div>
+          <div class="text-xl font-black tracking-tight leading-none">
+            <span class="text-slate-900">Anand </span>
+            <span class="text-[#0c7d85]">Netralaya</span>
+          </div>
+          <span class="text-[9px] tracking-[0.24em] text-slate-500 font-bold uppercase block mt-1">EYE CARE HOSPITAL</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden lg:flex items-center space-x-9 text-[15px] font-semibold text-slate-700">
+        <a href="index.html" class="hover:text-[#0c7d85] transition-colors py-1">Home</a>
+        <a href="about.html" class="hover:text-[#0c7d85] transition-colors py-1">About</a>
+        <a href="service.html" class="hover:text-[#0c7d85] transition-colors py-1">Services</a>
+        <a href="your-visit.html" class="hover:text-[#0c7d85] transition-colors py-1">Your Visit</a>
+        <a href="gallery.html" class="hover:text-[#0c7d85] transition-colors py-1">Gallery</a>
+        <a href="contact.html" class="hover:text-[#0c7d85] transition-colors py-1">Contact</a>
+      </div>
+
+      <!-- Right Callout -->
+      <div class="flex items-center space-x-6">
+        <a href="tel:+919923025465" class="hidden xl:flex items-center gap-2 text-[15px] font-bold text-[#0c7d85] hover:opacity-80 transition-opacity">
+          <i data-lucide="phone" class="w-4 h-4 text-[#0c7d85] stroke-[2.5]"></i>
+          <span>+91 99230 25465</span>
+        </a>
+
+        <a href="appointment.html" class="hidden sm:inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md transition-all duration-300">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book Appointment</span>
+        </a>
+
+        <button id="mobileMenuBtn" aria-label="Toggle menu" class="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-teal-100/50 focus:outline-none">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN APPOINTMENT SECTION ================= -->
+  <main class="py-12 sm:py-16 px-6 sm:px-12 lg:px-20 bg-gradient-to-b from-[#e3f4f1]/50 via-white to-[#f8fafc]">
+    <div class="max-w-6xl mx-auto space-y-10">
+      
+      <!-- Page Header -->
+      <div class="text-center space-y-3 max-w-3xl mx-auto">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+          <span>QUICK REGISTRATION</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
+          Book your <span class="text-[#0c7d85]">eye consultation</span>
+        </h1>
+        <p class="text-slate-600 text-sm sm:text-base font-medium">
+          Fill in the details below to schedule your visit with Dr. Anand Rout. Our reception team will confirm your slot promptly.
+        </p>
+      </div>
+
+      <!-- Booking Card & Info Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        
+        <!-- Left Column: Appointment Form -->
+        <div class="lg:col-span-7 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-lg space-y-6">
+          <form id="appointmentForm" class="space-y-5">
+            
+            <!-- Full Name -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Patient Full Name *</label>
+              <div class="relative">
+                <i data-lucide="user" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
+                <input type="text" required placeholder="Enter patient's full name" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
+              </div>
+            </div>
+
+            <!-- Phone & Email Row -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Mobile Number *</label>
+                <div class="relative">
+                  <i data-lucide="phone" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
+                  <input type="tel" required placeholder="+91 98765 43210" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Email Address</label>
+                <div class="relative">
+                  <i data-lucide="mail" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
+                  <input type="email" placeholder="example@gmail.com" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
+                </div>
+              </div>
+            </div>
+
+            <!-- Specialty Clinic Selection & Preferred Date -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Select Clinic / Specialty *</label>
+                <div class="relative">
+                  <i data-lucide="stethoscope" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
+                  <select required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all bg-white text-slate-700">
+                    <option value="" disabled selected>Choose subspecialty...</option>
+                    <option value="cataract">Cataract Clinic</option>
+                    <option value="retina">Retina &amp; Cornea Clinic</option>
+                    <option value="glaucoma">Glaucoma Clinic</option>
+                    <option value="lasik">LASIK Clinic</option>
+                    <option value="pediatric">Pediatric &amp; Squint Clinic</option>
+                    <option value="phaco">Phacoemulsification</option>
+                    <option value="dry-eye">Dry &amp; Lazy Eye Evaluation</option>
+                    <option value="general">General Routine Checkup</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Preferred Date *</label>
+                <div class="relative">
+                  <i data-lucide="calendar" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
+                  <input type="date" required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all bg-white text-slate-700">
+                </div>
+              </div>
+            </div>
+
+            <!-- Notes / Message -->
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Symptoms or Specific Requests</label>
+              <textarea rows="3" placeholder="Briefly describe any symptoms (e.g., blurry vision, redness, spectacle power renewal)..." class="w-full p-4 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all resize-none"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full py-4 bg-[#0a6269] hover:bg-[#074b50] hover:shadow-lg text-white font-extrabold text-sm rounded-xl shadow-md transition-all duration-300 flex items-center justify-center space-x-2">
+              <i data-lucide="check-circle" class="w-5 h-5"></i>
+              <span>Confirm &amp; Submit Appointment</span>
+            </button>
+
+          </form>
+        </div>
+
+        <!-- Right Column: Clinic Schedule & Important Guidelines -->
+        <div class="lg:col-span-5 space-y-6">
+          
+          <!-- Consulting Hours Box -->
+          <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/80 shadow-sm space-y-4">
+            <div class="flex items-center space-x-3 text-[#0c7d85]">
+              <div class="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center font-bold">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <h3 class="font-extrabold text-slate-900 text-base">Consulting Hours</h3>
+            </div>
+            <div class="text-xs sm:text-sm text-slate-600 space-y-2 border-t border-slate-100 pt-3">
+              <p class="flex justify-between">
+                <span class="font-semibold text-slate-800">Monday – Saturday (Morning):</span>
+                <span>10:00 AM – 1:00 PM</span>
+              </p>
+              <p class="flex justify-between">
+                <span class="font-semibold text-slate-800">Monday – Saturday (Evening):</span>
+                <span>5:00 PM – 8:00 PM</span>
+              </p>
+              <p class="flex justify-between">
+                <span class="font-semibold text-slate-800">Sunday:</span>
+                <span>10:00 AM – 12:00 PM</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Notice Card -->
+          <div class="bg-[#e3f4f1]/80 p-6 sm:p-7 rounded-3xl border border-[#cbe8e3] space-y-3">
+            <div class="flex items-center space-x-2 text-[#0c7d85] font-extrabold text-xs uppercase tracking-wider">
+              <i data-lucide="info" class="w-4 h-4"></i>
+              <span>Patient Guidance</span>
+            </div>
+            <ul class="text-xs sm:text-sm text-slate-700 space-y-2 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85] shrink-0 mt-2"></span>
+                <span>Patients with a prior appointment receive queue priority at reception.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85] shrink-0 mt-2"></span>
+                <span>Dilating drops blur vision for 2–3 hours. Please arrange return transport.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85] shrink-0 mt-2"></span>
+                <span>Bring existing spectacle prescriptions and medical reports.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Direct Phone / Emergency Help -->
+          <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/80 shadow-sm flex items-center justify-between">
+            <div class="space-y-1">
+              <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block">Need Immediate Help?</span>
+              <a href="tel:+919923025465" class="text-base sm:text-lg font-black text-[#0c7d85] hover:underline">+91 99230 25465</a>
+            </div>
+            <a href="https://wa.me/919923025465" target="_blank" class="w-11 h-11 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+              <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-[#052b2e] text-slate-300 py-10 px-6 sm:px-12 lg:px-20 border-t border-teal-950 mt-12">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center text-xs text-slate-400 gap-4">
+      <div>&copy; 2026 Anand Netralaya. All rights reserved.</div>
+      <div>Dr. Anand Rout - MBBS • DOMS • DNB • FICO (UK)</div>
+    </div>
+  </footer>
+
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Form Submission Handling
+    document.getElementById('appointmentForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you! Your appointment request has been submitted. Our reception team will contact you shortly.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
