@@ -238,6 +238,18 @@ footer .rounded-3xl {
   transform: translateY(-2px) scale(1.02);
 }
 
+#specialties .group .w-12,
+#specialties .group .w-12 svg,
+#specialties .group a,
+#specialties .group a i {
+  color: var(--primary);
+}
+
+#specialties .group a:hover,
+#specialties .group a:hover i {
+  color: var(--primary-deep);
+}
+
 #why-choose-us {
   background: radial-gradient(circle at top, #0f5b5f 0%, #0c474a 26%, #092d30 100%);
   color: #ffffff;

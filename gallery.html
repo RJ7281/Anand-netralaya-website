@@ -18,14 +18,23 @@
 
   <!-- Security Headers -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; base-uri 'self'; form-action 'self';" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="DENY" />
   <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
 
   <style>
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #0c7d85;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -70,7 +79,7 @@
           <span>+91 99230 25465</span>
         </a>
 
-        <a href="contact.html" class="hidden sm:inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md transition-all">
+        <a href="appointment.html" class="hidden sm:inline-flex items-center space-x-2 bg-[#0a6269] hover:bg-[#074b50] text-white font-bold text-sm px-6 py-2.5 rounded-full shadow-md transition-all">
           <i data-lucide="calendar" class="w-4 h-4"></i>
           <span>Book Appointment</span>
         </a>
@@ -115,88 +124,120 @@
         <span>PHOTO GALLERY</span>
       </div>
 
-      <!-- Main Headline matching video exactly -->
+      <!-- Main Headline -->
       <div class="space-y-2">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
           Inside <span class="text-[#0c7d85]">Anand Netralaya</span>
         </h1>
         <p class="text-slate-600 text-base sm:text-lg font-medium max-w-2xl">
-          Our examination rooms, diagnostic equipment and dedicated operation theatre complex with air-locked lobbies.
+          Our examination rooms, diagnostic equipment, and dedicated operation theatre complex with air-locked lobbies.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- Main Infrastructure Gallery Grid -->
+  <!-- Main Infrastructure Gallery Section with OT & OPD Tabs -->
   <section class="py-16 lg:py-24 px-6 sm:px-12 lg:px-20 bg-white">
-    <div class="max-w-7xl mx-auto space-y-12">
+    <div class="max-w-7xl mx-auto space-y-10">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Interactive Filter Tabs -->
+      <div class="flex justify-center items-center gap-3 flex-wrap">
+        <button 
+          type="button" 
+          onclick="filterGallery('all')" 
+          id="btn-all"
+          class="gallery-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-[#0c7d85] text-white shadow-md transition-all duration-300">
+          All Facilities
+        </button>
+        <button 
+          type="button" 
+          onclick="filterGallery('ot')" 
+          id="btn-ot"
+          class="gallery-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white text-slate-700 border border-slate-200 hover:border-[#0c7d85] hover:text-[#0c7d85] shadow-sm transition-all duration-300">
+          Operation Theatre (OT)
+        </button>
+        <button 
+          type="button" 
+          onclick="filterGallery('opd')" 
+          id="btn-opd"
+          class="gallery-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white text-slate-700 border border-slate-200 hover:border-[#0c7d85] hover:text-[#0c7d85] shadow-sm transition-all duration-300">
+          OPD &amp; Diagnostics
+        </button>
+      </div>
+
+      <!-- Infrastructure Image Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-4">
         
-        <!-- Image Card 1 -->
-        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-          <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-            <img src="gallery-6.webp" alt="Consultation Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <!-- OT Card 1: Operation Theatre Setup (gallery-7.jpeg) -->
+        <div class="gallery-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-category="ot">
+          <div class="aspect-[4/3] bg-slate-200 overflow-hidden relative">
+            <img src="gallery-7.jpeg" alt="Operation Theatre Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-[#0c7d85] text-white shadow-md">OT Complex</span>
           </div>
-          <div class="p-5">
-            <h3 class="font-extrabold text-slate-900 text-base">Consultation Room</h3>
-            <p class="text-slate-500 text-xs mt-1">Clean and comfortable patient consultation environment.</p>
-          </div>
-        </div>
-
-        <!-- Image Card 2 -->
-        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-          <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-            <img src="gallery-7.jpeg" alt="Operation Theatre Setup" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="p-5">
+          <div class="p-6 space-y-1">
             <h3 class="font-extrabold text-slate-900 text-base">Operation Theatre Complex</h3>
-            <p class="text-slate-500 text-xs mt-1">Dedicated OT with air-locked lobbies and sterile setup.</p>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Dedicated sterile surgical OT with air-locked lobbies and laminar airflow.</p>
           </div>
         </div>
 
-        <!-- Image Card 3 -->
-        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-          <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-            <img src="gallery-8.jpeg" alt="Diagnostic Equipment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <!-- OT Card 2: Diagnostic & Surgical Unit (gallery-8.jpeg) -->
+        <div class="gallery-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-category="ot">
+          <div class="aspect-[4/3] bg-slate-200 overflow-hidden relative">
+            <img src="gallery-8.jpeg" alt="Diagnostic Suite & OT Systems" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-[#0c7d85] text-white shadow-md">OT Facility</span>
           </div>
-          <div class="p-5">
-            <h3 class="font-extrabold text-slate-900 text-base">Diagnostic Suite</h3>
-            <p class="text-slate-500 text-xs mt-1">Advanced digital imaging and computerized refraction tech.</p>
-          </div>
-        </div>
-
-        <!-- Image Card 4 -->
-        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-          <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-            <img src="gallery-9.jpeg" alt="Slit-Lamp Examination" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="p-5">
-            <h3 class="font-extrabold text-slate-900 text-base">Slit-Lamp Examination Room</h3>
-            <p class="text-slate-500 text-xs mt-1">In-depth clinical assessment setup by Dr. Anand Raut.</p>
+          <div class="p-6 space-y-1">
+            <h3 class="font-extrabold text-slate-900 text-base">Micro-Incision Phaco Suite</h3>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Precision cataract surgical microscope and advanced autoclave setup.</p>
           </div>
         </div>
 
-        <!-- Image Card 5 -->
-        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-          <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-            <img src="gallery-10.jpeg" alt="Patient Waiting Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <!-- OPD Card 1: Consultation Room (gallery-6.webp) -->
+        <div class="gallery-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-category="opd">
+          <div class="aspect-[4/3] bg-slate-200 overflow-hidden relative">
+            <img src="gallery-6.webp" alt="Consultation Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-600 text-white shadow-md">OPD Consultation</span>
           </div>
-          <div class="p-5">
-            <h3 class="font-extrabold text-slate-900 text-base">Patient Reception & Waiting Lounge</h3>
-            <p class="text-slate-500 text-xs mt-1">Spacious, air-conditioned seating area for patients and families.</p>
+          <div class="p-6 space-y-1">
+            <h3 class="font-extrabold text-slate-900 text-base">Doctor Consultation Cabin</h3>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Clean, comfortable environment for in-depth patient consultation.</p>
           </div>
         </div>
 
-        <!-- Image Card 6 -->
-        <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-          <div class="aspect-[4/3] bg-slate-200 overflow-hidden">
-            <img src="gallery-11.jpeg" alt="Refraction & Eye Chart Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <!-- OPD Card 2: Slit-Lamp Examination (gallery-9.jpeg) -->
+        <div class="gallery-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-category="opd">
+          <div class="aspect-[4/3] bg-slate-200 overflow-hidden relative">
+            <img src="gallery-9.jpeg" alt="Slit-Lamp Examination" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-600 text-white shadow-md">OPD Diagnostics</span>
           </div>
-          <div class="p-5">
-            <h3 class="font-extrabold text-slate-900 text-base">Refraction &amp; Vision Check Room</h3>
-            <p class="text-slate-500 text-xs mt-1">Precision optometry refraction and auto-refractometer testing.</p>
+          <div class="p-6 space-y-1">
+            <h3 class="font-extrabold text-slate-900 text-base">Slit-Lamp Biomicroscopy Room</h3>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Detailed cornea, anterior chamber, and retinal diagnostic assessment.</p>
+          </div>
+        </div>
+
+        <!-- OPD Card 3: Patient Waiting Lounge (gallery-10.jpeg) -->
+        <div class="gallery-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-category="opd">
+          <div class="aspect-[4/3] bg-slate-200 overflow-hidden relative">
+            <img src="gallery-10.jpeg" alt="Patient Waiting Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-600 text-white shadow-md">OPD Reception</span>
+          </div>
+          <div class="p-6 space-y-1">
+            <h3 class="font-extrabold text-slate-900 text-base">Patient Reception &amp; Lounge</h3>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Spacious, air-conditioned seating area for patients and accompanying family.</p>
+          </div>
+        </div>
+
+        <!-- OPD Card 4: Refraction Room (gallery-11.jpeg) -->
+        <div class="gallery-card group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300" data-category="opd">
+          <div class="aspect-[4/3] bg-slate-200 overflow-hidden relative">
+            <img src="gallery-11.jpeg" alt="Refraction & Eye Chart Room" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-4 left-4 text-[10px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-emerald-600 text-white shadow-md">OPD Diagnostics</span>
+          </div>
+          <div class="p-6 space-y-1">
+            <h3 class="font-extrabold text-slate-900 text-base">Refraction &amp; Vision Testing Room</h3>
+            <p class="text-slate-500 text-xs sm:text-sm leading-relaxed">Precision optometry refraction, eye charts, and auto-refractometer testing.</p>
           </div>
         </div>
 
@@ -277,109 +318,68 @@
     </div>
   </footer>
 
- <script>
-  // Initialize Lucide Icons
-  if (window.lucide) {
-    lucide.createIcons();
-  }
+  <script>
+    // Initialize Lucide Icons
+    if (window.lucide) {
+      lucide.createIcons();
+    }
 
-  // Header Transparency on Scroll
-  const header = document.getElementById('mainHeader');
-  if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.remove('bg-[#e3f4f1]', 'border-[#cbe8e3]');
-        header.classList.add('bg-white/70', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
-      } else {
-        header.classList.add('bg-[#e3f4f1]', 'border-[#cbe8e3]');
-        header.classList.remove('bg-white/70', 'backdrop-blur-md', 'border-transparent', 'shadow-sm');
-      }
-    });
-  }
-
-  // Mobile Menu Drawer Handler
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-
-  if (mobileMenuBtn && mobileMenu) {
-    mobileMenuBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-      }
-    });
-  }
-
-  // FAQ Accordion Toggle
-  document.querySelectorAll('.faq-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const answer = item.querySelector('.faq-answer');
-      const icon = item.querySelector('.faq-icon');
-      
-      if (!answer) return;
-
-      const isHidden = answer.classList.contains('hidden');
-      
-      document.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
-      document.querySelectorAll('.faq-icon').forEach(i => {
-        if (i) i.style.transform = 'rotate(0deg)';
-      });
-      document.querySelectorAll('.faq-item').forEach(i => i.setAttribute('aria-expanded', 'false'));
-
-      if (isHidden) {
-        answer.classList.remove('hidden');
-        if (icon) icon.style.transform = 'rotate(180deg)';
-        item.setAttribute('aria-expanded', 'true');
-      }
-    });
-  });
-
-  // Smooth Counter Animation
-  function startCounterAnimation() {
-    const counters = document.querySelectorAll('.counter-number');
-
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 1200;
-      const start = performance.now();
-
-      function step(now) {
-        const elapsed = now - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const currentCount = Math.floor(progress * target);
-
-        counter.innerText = currentCount.toLocaleString();
-
-        if (progress < 1) {
-          requestAnimationFrame(step);
+    // Header Transparency on Scroll
+    const header = document.getElementById('mainHeader');
+    if (header) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.remove('bg-[#e3f4f1]', 'border-[#cbe8e3]');
+          header.classList.add('bg-white/80', 'backdrop-blur-md', 'border-slate-200/80', 'shadow-sm');
         } else {
-          counter.innerText = target.toLocaleString();
-        }
-      }
-
-      requestAnimationFrame(step);
-    });
-  }
-
-  let animated = false;
-  const metricsSection = document.getElementById('metrics-section');
-
-  if (metricsSection) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !animated) {
-          startCounterAnimation();
-          animated = true;
+          header.classList.add('bg-[#e3f4f1]', 'border-[#cbe8e3]');
+          header.classList.remove('bg-white/80', 'backdrop-blur-md', 'border-slate-200/80', 'shadow-sm');
         }
       });
-    }, { threshold: 0.3 });
+    }
 
-    observer.observe(metricsSection);
-  }
-</script>
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      });
+    }
+
+    // Gallery Category Filtering (OT vs OPD)
+    function filterGallery(category) {
+      const cards = document.querySelectorAll('.gallery-card');
+      const buttons = document.querySelectorAll('.gallery-filter-btn');
+
+      // Reset button styles
+      buttons.forEach(btn => {
+        btn.className = 'gallery-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white text-slate-700 border border-slate-200 hover:border-[#0c7d85] hover:text-[#0c7d85] shadow-sm transition-all duration-300';
+      });
+
+      // Highlight active button
+      const activeBtn = document.getElementById(`btn-${category}`);
+      if (activeBtn) {
+        activeBtn.className = 'gallery-filter-btn px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-[#0c7d85] text-white shadow-md transition-all duration-300';
+      }
+
+      // Filter card visibility
+      cards.forEach(card => {
+        const itemCategory = card.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>

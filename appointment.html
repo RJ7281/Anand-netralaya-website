@@ -9,6 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230c7d85' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z'/><circle cx='12' cy='12' r='3' fill='%230c7d85'/></svg>">
 
   <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css" />
 
   <!-- Google Fonts -->
@@ -21,9 +22,8 @@
 
   <!-- Security Headers -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'none'; base-uri 'self'; form-action 'self';" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:; base-uri 'self'; form-action 'self';" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="DENY" />
   <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
 
   <style>
@@ -93,6 +93,17 @@
         </button>
       </div>
     </nav>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-[#cbe8e3] bg-white/95 px-6 py-4 space-y-3 font-semibold text-slate-800">
+      <a href="index.html" class="block py-1 hover:text-[#0c7d85]">Home</a>
+      <a href="about.html" class="block py-1 hover:text-[#0c7d85]">About</a>
+      <a href="service.html" class="block py-1 hover:text-[#0c7d85]">Services</a>
+      <a href="your-visit.html" class="block py-1 hover:text-[#0c7d85]">Your Visit</a>
+      <a href="gallery.html" class="block py-1 hover:text-[#0c7d85]">Gallery</a>
+      <a href="contact.html" class="block py-1 hover:text-[#0c7d85]">Contact</a>
+      <a href="tel:+919923025465" class="block py-1 text-[#0c7d85] font-bold">+91 99230 25465</a>
+    </div>
   </header>
 
   <!-- ================= MAIN APPOINTMENT SECTION ================= -->
@@ -102,14 +113,14 @@
       <!-- Page Header -->
       <div class="text-center space-y-3 max-w-3xl mx-auto">
         <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-white border border-teal-100 text-[#0c7d85] text-xs font-bold uppercase tracking-wider shadow-sm">
-          <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-          <span>QUICK REGISTRATION</span>
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>DIRECT WALK-IN &bull; PRE-REGISTRATION</span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight">
           Book your <span class="text-[#0c7d85]">eye consultation</span>
         </h1>
         <p class="text-slate-600 text-sm sm:text-base font-medium">
-          Fill in the details below to schedule your visit with Dr. Anand Raut. Our reception team will confirm your slot promptly.
+          Pre-register your visit with Dr. Anand Raut to expedite your case paperwork at the reception desk.
         </p>
       </div>
 
@@ -125,7 +136,7 @@
               <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Patient Full Name *</label>
               <div class="relative">
                 <i data-lucide="user" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                <input type="text" required placeholder="Enter patient's full name" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
+                <input type="text" id="patientName" required placeholder="Enter patient's full name" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
               </div>
             </div>
 
@@ -135,7 +146,7 @@
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Mobile Number *</label>
                 <div class="relative">
                   <i data-lucide="phone" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                  <input type="tel" required placeholder="+91 98765 43210" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
+                  <input type="tel" id="patientPhone" required placeholder="+91 98765 43210" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
                 </div>
               </div>
 
@@ -143,7 +154,7 @@
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Email Address</label>
                 <div class="relative">
                   <i data-lucide="mail" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                  <input type="email" placeholder="example@gmail.com" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
+                  <input type="email" id="patientEmail" placeholder="example@gmail.com" class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all">
                 </div>
               </div>
             </div>
@@ -154,16 +165,16 @@
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Select Clinic / Specialty *</label>
                 <div class="relative">
                   <i data-lucide="stethoscope" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                  <select required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all bg-white text-slate-700">
+                  <select id="specialtySelect" required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all bg-white text-slate-700">
                     <option value="" disabled selected>Choose subspecialty...</option>
-                    <option value="cataract">Cataract Clinic</option>
-                    <option value="retina">Retina &amp; Cornea Clinic</option>
-                    <option value="glaucoma">Glaucoma Clinic</option>
-                    <option value="lasik">LASIK Clinic</option>
-                    <option value="pediatric">Pediatric &amp; Squint Clinic</option>
-                    <option value="phaco">Phacoemulsification</option>
-                    <option value="dry-eye">Dry &amp; Lazy Eye Evaluation</option>
-                    <option value="general">General Routine Checkup</option>
+                    <option value="Cataract Clinic">Cataract Clinic</option>
+                    <option value="Retina & Cornea Clinic">Retina &amp; Cornea Clinic</option>
+                    <option value="Glaucoma Clinic">Glaucoma Clinic</option>
+                    <option value="LASIK Clinic">LASIK Clinic</option>
+                    <option value="Pediatric & Squint Clinic">Pediatric &amp; Squint Clinic</option>
+                    <option value="Phacoemulsification">Phacoemulsification</option>
+                    <option value="Dry & Lazy Eye Evaluation">Dry &amp; Lazy Eye Evaluation</option>
+                    <option value="General Routine Checkup">General Routine Checkup</option>
                   </select>
                 </div>
               </div>
@@ -172,7 +183,7 @@
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Preferred Date *</label>
                 <div class="relative">
                   <i data-lucide="calendar" class="w-5 h-5 text-slate-400 absolute left-4 top-3.5"></i>
-                  <input type="date" required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all bg-white text-slate-700">
+                  <input type="date" id="appointmentDate" required class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all bg-white text-slate-700">
                 </div>
               </div>
             </div>
@@ -180,19 +191,19 @@
             <!-- Notes / Message -->
             <div>
               <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-2">Symptoms or Specific Requests</label>
-              <textarea rows="3" placeholder="Briefly describe any symptoms (e.g., blurry vision, redness, spectacle power renewal)..." class="w-full p-4 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all resize-none"></textarea>
+              <textarea id="symptomsText" rows="3" placeholder="Briefly describe any symptoms (e.g., blurry vision, redness, spectacle renewal)..." class="w-full p-4 rounded-xl border border-slate-200 focus:border-[#0c7d85] focus:ring-2 focus:ring-[#0c7d85]/20 outline-none text-sm transition-all resize-none"></textarea>
             </div>
 
             <!-- Submit Button -->
             <button type="submit" class="w-full py-4 bg-[#0a6269] hover:bg-[#074b50] hover:shadow-lg text-white font-extrabold text-sm rounded-xl shadow-md transition-all duration-300 flex items-center justify-center space-x-2">
               <i data-lucide="check-circle" class="w-5 h-5"></i>
-              <span>Confirm &amp; Submit Appointment</span>
+              <span>Send Pre-Registration Request</span>
             </button>
 
           </form>
         </div>
 
-        <!-- Right Column: Clinic Schedule & Important Guidelines -->
+        <!-- Right Column: Clinic Schedule & Guidelines -->
         <div class="lg:col-span-5 space-y-6">
           
           <!-- Consulting Hours Box -->
@@ -214,7 +225,7 @@
               </p>
               <p class="flex justify-between">
                 <span class="font-semibold text-slate-800">Sunday:</span>
-                <span>10:00 AM – 12:00 PM</span>
+                <span class="text-amber-700 font-medium">Closed / Emergency Only</span>
               </p>
             </div>
           </div>
@@ -223,31 +234,31 @@
           <div class="bg-[#e3f4f1]/80 p-6 sm:p-7 rounded-3xl border border-[#cbe8e3] space-y-3">
             <div class="flex items-center space-x-2 text-[#0c7d85] font-extrabold text-xs uppercase tracking-wider">
               <i data-lucide="info" class="w-4 h-4"></i>
-              <span>Patient Guidance</span>
+              <span>Patient Guidelines</span>
             </div>
             <ul class="text-xs sm:text-sm text-slate-700 space-y-2 leading-relaxed">
               <li class="flex items-start gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85] shrink-0 mt-2"></span>
-                <span>Patients with a prior appointment receive queue priority at reception.</span>
+                <span>Walk-ins are accommodated on a first-come, first-served basis.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85] shrink-0 mt-2"></span>
-                <span>Dilating drops blur vision for 2–3 hours. Please arrange return transport.</span>
+                <span>Dilating drops blur vision for 2–3 hours; consider bringing an escort.</span>
               </li>
               <li class="flex items-start gap-2">
                 <span class="w-1.5 h-1.5 rounded-full bg-[#0c7d85] shrink-0 mt-2"></span>
-                <span>Bring existing spectacle prescriptions and medical reports.</span>
+                <span>Please bring past spectacle prescriptions or medical records.</span>
               </li>
             </ul>
           </div>
 
-          <!-- Direct Phone / Emergency Help -->
+          <!-- Direct Phone / WhatsApp Help -->
           <div class="bg-white p-6 sm:p-7 rounded-3xl border border-slate-200/80 shadow-sm flex items-center justify-between">
             <div class="space-y-1">
-              <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block">Need Immediate Help?</span>
+              <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-widest block">Direct Hospital Line</span>
               <a href="tel:+919923025465" class="text-base sm:text-lg font-black text-[#0c7d85] hover:underline">+91 99230 25465</a>
             </div>
-            <a href="https://wa.me/919923025465" target="_blank" class="w-11 h-11 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-md hover:scale-110 transition-transform">
+            <a href="https://wa.me/919923025465" target="_blank" class="w-11 h-11 bg-[#25D366] text-white rounded-2xl flex items-center justify-center shadow-md hover:scale-110 transition-transform" aria-label="Chat on WhatsApp">
               <i data-lucide="message-circle" class="w-5 h-5 fill-current"></i>
             </a>
           </div>
@@ -268,16 +279,53 @@
   </footer>
 
   <script>
+    // Initialize vector icons
     if (window.lucide) {
       lucide.createIcons();
     }
 
-    // Form Submission Handling
-    document.getElementById('appointmentForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      alert('Thank you! Your appointment request has been submitted. Our reception team will contact you shortly.');
-      e.target.reset();
-    });
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Set minimum date to today
+    const dateInput = document.getElementById('appointmentDate');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+
+    // Form Submission: Pre-fills and opens WhatsApp message
+    const form = document.getElementById('appointmentForm');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const name = document.getElementById('patientName').value.trim();
+        const phone = document.getElementById('patientPhone').value.trim();
+        const specialty = document.getElementById('specialtySelect').value;
+        const date = document.getElementById('appointmentDate').value;
+        const symptoms = document.getElementById('symptomsText').value.trim();
+
+        const message = `*New Appointment / Visit Registration*\n` +
+                        `• Name: ${name}\n` +
+                        `• Phone: ${phone}\n` +
+                        `• Specialty: ${specialty}\n` +
+                        `• Preferred Date: ${date}\n` +
+                        (symptoms ? `• Symptoms/Notes: ${symptoms}` : '');
+
+        const encodedMsg = encodeURIComponent(message);
+        window.open(`https://wa.me/919923025465?text=${encodedMsg}`, '_blank');
+
+        alert('Thank you! Redirecting to WhatsApp to send your registration to Anand Netralaya reception.');
+        form.reset();
+      });
+    }
   </script>
 </body>
 </html>
